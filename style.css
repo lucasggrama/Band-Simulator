@@ -1,0 +1,25 @@
+#pagina-principal{
+background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallup.net%2Fwp-content%2Fuploads%2F2019%2F09%2F09%2F41506-the-rolling-stones-bw-black-white-faces-bands-group-retro-rock-hard.jpg&f=1&nofb=1&ipt=a2cb9625e723ed1c5650c8a2e3cbf7deefb0544ae4176ef88149d352cffa6777&ipo=images);
+background-size: 100%;
+}
+#titulo h1 {
+    font-family: 'Permanent Marker', cursive;
+    color: white;
+}
+#titulo a {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    text-decoration: none;
+    left: 30px;
+    position: relative;
+}
+#conteudo-principal{
+    position: relative;
+    top: 300px;
+    left: 30px;
+
+}
+#logo{
+    color: white;
+    filter: invert(1);
+}
