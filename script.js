@@ -1,3 +1,4 @@
+//salve
 function gerarNumero(min, max) {
     return parseInt(Math.random() * (max - min) + min);
 }
