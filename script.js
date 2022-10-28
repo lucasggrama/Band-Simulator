@@ -19,4 +19,4 @@ let bandas= [
     },
     ]
 let i = gerarNumero(0, 5);
-document.body.style.backgroundImage = "url(" + bandas[0].imagem + ")";
+document.body.style.backgroundImage = `url(${bandas[0].imagem})`;
