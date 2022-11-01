@@ -1,10 +1,18 @@
 #pagina-principal{
-    background-color: black;
-}
-html, body {
+    background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapercave.com%2Fwp%2Fwp2508495.jpg&f=1&nofb=1&ipt=aee8d3a84421f0fa24cf3d8998766d378de9c87eeec68426eec7232f8341051c&ipo=images);
     min-height: 100%;
-}
+    min-width: 1024px;
 
+    /* Set up proportionate scaling */
+    width: 100%;
+    height: auto;
+
+    /* Set up positioning */
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-size: 100%;
+}
 #titulo h1 {
     font-family: 'Permanent Marker', cursive;
     color: white;
@@ -20,9 +28,7 @@ html, body {
     position: relative;
     top: 300px;
     left: 30px;
-
 }
 #logo{
-    color: white;
     filter: invert(1);
 }
