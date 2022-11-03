@@ -1,3 +1,4 @@
+
 function gerarNumero(min, max) {
     return parseInt(Math.random() * (max - min) + min);
 }
@@ -32,5 +33,16 @@ function geraNovamente(){
 
 geraNovamente();
 localStorage.setItem('imagemAleatoria', i);
-let imagemBackground = document.querySelector('#imagemRandom')
+let imagemBackground = document.querySelector('#bodyInicial')
 imagemBackground.style.backgroundImage = `url(${bandas[i].imagem})`;
+
+// LIGHT MODE
+
+let switchDarkModeEl = document.querySelector("#switcher")
+let bodyDoSiteEl = document.querySelector("body")
+
+switchDarkModeEl.addEventListener('click', () => {
+    bodyDoSiteEl.classList.toggle('escuro')
+});
+
+// FIM LIGHT MODE

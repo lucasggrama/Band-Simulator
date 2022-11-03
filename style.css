@@ -1,4 +1,12 @@
 body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    min-height: 100%;
+}
+#bodyInicial{
     background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapercave.com%2Fwp%2Fwp2508495.jpg&f=1&nofb=1&ipt=aee8d3a84421f0fa24cf3d8998766d378de9c87eeec68426eec7232f8341051c&ipo=images);
     background-size: cover;
     background-repeat: no-repeat;
@@ -33,3 +41,60 @@ body {
     filter: invert(1);
     padding-top: 150px;
 }
+
+/*AI MEUS OLHOSSSSSSSSSSSSSSSSSS*/
+/* BOTAO TROCA TEMA*/
+ 
+img,
+iframe {
+  position: center;
+
+}
+
+.theme-switcher {
+  position: absolute;
+  right: 30px;
+}
+
+input {
+  width: 0;
+  height: 0;
+  display: none;
+  visibility: hidden;
+}
+
+label {
+  cursor: pointer;
+  display: block;
+  text-indent: -9999px;
+  height: 30px;
+  width: 60px;
+  border-radius: 50px;
+  background-color: #051428;
+  transition: 0.5s ease background-color;
+}
+
+label::after {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-radius: 50px;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  background-color: #faebd7;
+  transition: 0.5s ease;
+}
+
+input:checked+label::after {
+  /* left: calc(100% - 2.5px); */
+  left: calc(100% - 25px);
+  background-color: antiquewhite;
+}
+
+input:checked+label {
+  background-color: rosybrown;
+}
+
+ /*FIM BOTAO TROCA TEMA*/
