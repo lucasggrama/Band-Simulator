@@ -3,20 +3,21 @@ function gerarNumero(min, max) {
 }
 let bandas= [
     { 
-        imagem: "url('./imgs/ghost.png')"
+        imagem: './imgs/ghost.png'
     },
     {
-        imagem: "url('./imgs/stones.png')"
+        imagem: './imgs/stones.png'
     },
     {
-        imagem: "url('./imgs/mayhem.png')"
+        imagem: './imgs/mayhem.png'
     },
     {
-        imagem: "url('./imgs/queen.png')"
+        imagem: './imgs/queen.png'
     },
     {
-        imagem: "url('./imgs/metallica')"
+        imagem: './imgs/metallica'
     },
     ]
-let i = gerarNumero(0, 5);
-document.body.style.backgroundImage = `url(${bandas[i].imagem})`;
+let i = gerarNumero(0, 4);
+let imagemBackground = document.querySelector('#imagemRandom')
+imagemBackground.style.backgroundImage = `url(${bandas[i].imagem})`;
