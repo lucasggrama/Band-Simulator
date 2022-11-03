@@ -18,7 +18,7 @@ body {
 #titulo a {
     font-family: 'Bebas Neue', cursive;
     font-size: 4vh;
-    text-shadow: -5px 4px 14px rgba(166,255,147,0.6);
+    text-shadow: -5px 4px 14px rgb(26, 105, 119);
     color: white;
     text-decoration: none;
 }
@@ -31,4 +31,5 @@ body {
     width: 20vh;
     height: 20vh;
     filter: invert(1);
+    padding-top: 150px;
 }
