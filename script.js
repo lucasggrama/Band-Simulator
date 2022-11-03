@@ -15,9 +15,22 @@ let bandas= [
         imagem: './imgs/queen.png'
     },
     {
-        imagem: './imgs/metallica'
+        imagem: './imgs/metallica.png'
     },
     ]
-let i = gerarNumero(0, 4);
+
+let i = gerarNumero(0, 5);
+if(i === localStorage.getItem('imagemAleatoria')){
+    geraNovamente();
+}
+function geraNovamente(){
+    if (i == localStorage.getItem('imagemAleatoria')){
+        i = gerarNumero(0, 5);
+        geraNovamente();
+    }
+}
+
+geraNovamente();
+localStorage.setItem('imagemAleatoria', i);
 let imagemBackground = document.querySelector('#imagemRandom')
 imagemBackground.style.backgroundImage = `url(${bandas[i].imagem})`;
