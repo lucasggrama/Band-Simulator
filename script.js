@@ -27,7 +27,7 @@ let bandas = [
         imagem: './imgs/metallica.png',
         musica: 'Sad But True - Metallica',
         audio: 'audio/metallica.mp3'
-  },
+    },
 ]
 
 let i = gerarNumero(0, 5);
