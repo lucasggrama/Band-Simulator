@@ -63,3 +63,9 @@ switchDarkModeEl.addEventListener('click', () => {
 });
 
 // FIM LIGHT MODE
+// INICIO DO JOGO
+class config = {
+    type = Phaser.AUTO
+    parent = 'jogo';
+    scene = [];
+}
