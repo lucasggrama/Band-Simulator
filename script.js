@@ -4,19 +4,24 @@ function gerarNumero(min, max) {
 }
 let bandas= [
     { 
-        imagem: './imgs/ghost.png'
+        imagem: './imgs/ghost.png',
+        musica: 'Mary on a Cross - Ghost'
     },
     {
-        imagem: './imgs/stones.png'
+        imagem: './imgs/stones.png',
+        musica: 'Paint it, Black - The Rolling Stones'
     },
     {
-        imagem: './imgs/mayhem.png'
+        imagem: './imgs/mayhem.png',
+        musica: 'Freezing Moon - Mayhem'   
     },
     {
-        imagem: './imgs/queen.png'
+        imagem: './imgs/queen.png',
+        musica: 'Bohemian Rhapsody - Queen'
     },
     {
-        imagem: './imgs/metallica.png'
+        imagem: './imgs/metallica.png',
+        musica: 'Enter Sandman - Metallica'
     },
     ]
 
@@ -33,7 +38,9 @@ function geraNovamente(){
 
 geraNovamente();
 localStorage.setItem('imagemAleatoria', i);
-let imagemBackground = document.querySelector('#bodyInicial')
+let imagemBackground = document.querySelector('#bodyInicial');
+let musica = document.querySelector('#musica');
+musica.innerHTML = bandas[i].musica;
 imagemBackground.style.backgroundImage = `url(${bandas[i].imagem})`;
 
 // LIGHT MODE
