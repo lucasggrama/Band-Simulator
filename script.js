@@ -17,7 +17,7 @@ let bandas= [
     },
     {
         imagem: './imgs/queen.png',
-        musica: 'Bohemian Rhapsody - Queen'
+        musica: 'Don`t Stop Me Now - Queen'
     },
     {
         imagem: './imgs/metallica.png',
