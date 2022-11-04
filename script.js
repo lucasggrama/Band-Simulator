@@ -21,7 +21,7 @@ let bandas= [
     },
     {
         imagem: './imgs/metallica.png',
-        musica: 'Enter Sandman - Metallica'
+        musica: 'Master of Puppets - Metallica'
     },
     ]
 
