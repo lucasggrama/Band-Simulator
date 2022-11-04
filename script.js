@@ -5,7 +5,7 @@ function gerarNumero(min, max) {
 let bandas= [
     { 
         imagem: './imgs/ghost.png',
-        musica: 'Mary on a Cross - Ghost'
+        musica: 'Dance Macabre - Ghost'
     },
     {
         imagem: './imgs/stones.png',
