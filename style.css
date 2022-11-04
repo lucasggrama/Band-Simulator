@@ -38,6 +38,7 @@ body {
     text-decoration: none;
 }
 
+
 #conteudo-principal {
     text-align: center;
 }
@@ -47,6 +48,12 @@ body {
     height: 20vh;
     filter: invert(1);
     padding-top: 150px;
+}
+#placar {
+  
+}
+.invisivel {
+  
 }
 
 /*AI MEUS OLHOSSSSSSSSSSSSSSSSSS*/

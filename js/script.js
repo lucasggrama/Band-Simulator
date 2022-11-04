@@ -1,4 +1,3 @@
-
 function gerarNumero(min, max) {
     return parseInt(Math.random() * (max - min) + min);
 }
@@ -43,15 +42,20 @@ function geraNovamente() {
         geraNovamente();
     }
 }
-
 geraNovamente();
+
 localStorage.setItem('imagemAleatoria', i);
 let imagemBackground = document.querySelector('#bodyInicial');
+imagemBackground.style.backgroundImage = `url(${bandas[i].imagem})`;
+
+//audio
+
 let musica = document.querySelector('#musica');
 let audio = document.querySelector('audio');
 musica.innerHTML = bandas[i].musica;
 audio.src = bandas[i].audio;
-imagemBackground.style.backgroundImage = `url(${bandas[i].imagem})`;
+
+// fim audio
 
 // LIGHT MODE
 
@@ -62,15 +66,8 @@ switchDarkModeEl.addEventListener('click', () => {
     bodyDoSiteEl.classList.toggle('escuro')
 });
 
-import CenaCarregamento from "./cena-carregamento";
 // FIM LIGHT MODE
-// INICIO DO JOGO
-import CenaPontos from "./cena-pontos";
-import CenaJogo from "./cena-jogo";
-import CenaCarregamento from "./cena-carregamento";
 
-const config = {
-    type: Phaser.AUTO,
-    parent: 'jogo',
-    scene: [CenaCarregamento, CenaJogo, CenaPontos],
-}
+// Placar
+
+let 
