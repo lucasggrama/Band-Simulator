@@ -21,7 +21,7 @@ let bandas= [
     },
     {
         imagem: './imgs/metallica.png',
-        musica: 'Master of Puppets - Metallica'
+        musica: 'Sad But True - Metallica'
     },
     ]
 
