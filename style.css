@@ -37,6 +37,13 @@ body {
     color: white;
     text-decoration: none;
 }
+#titulo p {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 4vh;
+  text-shadow: -5px 4px 14px rgb(26, 105, 119);
+  color: white;
+  text-decoration: none;
+}
 
 
 #conteudo-principal {
@@ -50,10 +57,24 @@ body {
     padding-top: 150px;
 }
 #placar {
-  
+	  
 }
-.invisivel {
-  
+#sobre {
+  position: relative; 
+  width: 45vh;
+  height: 42vh;
+  background-color:black;
+  border-radius: 20%;
+}
+#sobre p {
+  text-align: center;
+  color:burlywood;
+  padding: 2% 7% 2% 7%;
+}
+#sobre h2 {
+  text-align: center;
+  color:rgb(36, 31, 31);
+  padding-top: 2%;
 }
 
 /*AI MEUS OLHOSSSSSSSSSSSSSSSSSS*/

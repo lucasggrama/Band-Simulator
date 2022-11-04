@@ -59,15 +59,33 @@ audio.src = bandas[i].audio;
 
 // LIGHT MODE
 
-let switchDarkModeEl = document.querySelector("#switcher")
-let bodyDoSiteEl = document.querySelector("body")
+let switchDarkModeEl = document.querySelector("#switcher");
+let bodyDoSiteEl = document.querySelector("body");
 
 switchDarkModeEl.addEventListener('click', () => {
-    bodyDoSiteEl.classList.toggle('escuro')
+    bodyDoSiteEl.classList.toggle('escuro');
 });
 
 // FIM LIGHT MODE
 
-// Placar
+// botoes
+function aparecerDiv(e){
+    
+    if(e.currentTarget.innerHTML == "Sobre"){
+        sobreEl.style.backgroundColor = "white";
+    }
+    else{
+        placarEl.style.width;
+    }
+}
 
-let 
+let botaoDiv = document.querySelectorAll(".botoesDiv");
+let sobreEl = document.querySelector('#sobre');
+let placarEl = document.querySelector('#placar');
+
+for(botoes of botaoDiv){
+    botoes.addEventListener('click', aparecerDiv);
+}
+
+
+// fim botoes
