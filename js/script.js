@@ -62,10 +62,15 @@ switchDarkModeEl.addEventListener('click', () => {
     bodyDoSiteEl.classList.toggle('escuro')
 });
 
+import CenaCarregamento from "./cena-carregamento";
 // FIM LIGHT MODE
 // INICIO DO JOGO
-class config = {
-    type = Phaser.AUTO
-    parent = 'jogo';
-    scene = [];
+import CenaPontos from "./cena-pontos";
+import CenaJogo from "./cena-jogo";
+import CenaCarregamento from "./cena-carregamento";
+
+const config = {
+    type: Phaser.AUTO,
+    parent: 'jogo',
+    scene: [CenaCarregamento, CenaJogo, CenaPontos],
 }
