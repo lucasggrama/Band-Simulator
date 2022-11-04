@@ -31,7 +31,7 @@ let bandas = [
 ]
 
 let volumeEl = document.querySelector("#reproducao-musica");
-volumeEl.volume = 0.4;
+volumeEl.volume = 0.2;
 
 let i = gerarNumero(0, 5);
 if (i === localStorage.getItem('imagemAleatoria')) {
