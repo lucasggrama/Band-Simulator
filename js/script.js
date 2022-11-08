@@ -57,29 +57,24 @@ audio.play();
 
 // fim audio
 
-// LIGHT MODE
-
-let switchDarkModeEl = document.querySelector("#switcher");
-let bodyDoSiteEl = document.querySelector("body");
-
-switchDarkModeEl.addEventListener('click', () => {
-    bodyDoSiteEl.classList.toggle('escuro');
-});
-
-// FIM LIGHT MODE
-
 // botoes
 function aparecerDiv(e){
     
     if(e.currentTarget.innerHTML == "Sobre"){
-        sobreEl.style.backgroundColor = "white";
+        if(sobreEl.style.display == "none")
+            sobreEl.style.display = "block";
+        else
+        sobreEl.style.display = "none";
     }
     else{
-        placarEl.style.width;
+        if(placarEl.style.display == "none")
+            placarEl.style.display = "block";
+        else
+            placarEl.style.display = "none";
     }
 }
 
-let botaoDiv = document.querySelectorAll(".botoesDiv");
+let botaoDiv = document.querySelectorAll('.botoesDiv');
 let sobreEl = document.querySelector('#sobre');
 let placarEl = document.querySelector('#placar');
 

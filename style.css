@@ -57,14 +57,14 @@ body {
     padding-top: 150px;
 }
 #placar {
-	  
+  display: none;
 }
 #sobre {
-  position: relative; 
+  display: none;
+  float:left;
   width: 45vh;
-  height: 42vh;
+  height: 60%;
   background-color:black;
-  border-radius: 20%;
 }
 #sobre p {
   text-align: center;
