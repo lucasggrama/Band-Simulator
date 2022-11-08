@@ -28,7 +28,6 @@ let bandas = [
         audio: 'audio/metallica.mp3'
     },
 ]
-audio.play();
 let volumeEl = document.querySelector("#reproducao-musica");
 volumeEl.volume = 0.2;
 
@@ -54,6 +53,7 @@ let musica = document.querySelector('#musica');
 let audio = document.querySelector('audio');
 musica.innerHTML = bandas[i].musica;
 audio.src = bandas[i].audio;
+audio.play();
 
 // fim audio
 
