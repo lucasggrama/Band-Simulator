@@ -66,7 +66,7 @@ function aparecerDiv(e){
         else
         sobreEl.style.display = "none";
     }
-    else{
+    else if(e.currentTarget.innerHTML == "Placar"){
         if(placarEl.style.display == "none")
             placarEl.style.display = "block";
         else

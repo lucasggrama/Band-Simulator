@@ -24,13 +24,14 @@ body {
   top: 10px;
 }
 #titulo h1 {
-    font-family: 'Righteous', cursive;
-    font-size: 6vh;
-    text-shadow: 2px 4px 14px rgba(72,0,255,0.6);
-    color: #e5ffbb;
+  font-family: 'Righteous', cursive;
+  font-size: 6vh;
+  text-shadow: 2px 4px 14px rgba(72,0,255,0.6);
+  color: #e5ffbb;
 }
 
 #titulo a {
+    display: inline-block;
     font-family: 'Bebas Neue', cursive;
     font-size: 4vh;
     text-shadow: -5px 4px 14px rgb(26, 105, 119);
@@ -38,11 +39,26 @@ body {
     text-decoration: none;
 }
 #titulo p {
+  display: inline-block;
   font-family: 'Bebas Neue', cursive;
   font-size: 4vh;
   text-shadow: -5px 4px 14px rgb(26, 105, 119);
   color: white;
   text-decoration: none;
+  margin: 0;
+}
+.botoesDiv:hover {
+  animation: girando 1s ease-in-out 0s infinite alternate;
+  cursor:pointer;
+}
+
+@keyframes girando {
+  from {
+    transform: rotate(15deg);
+  }
+  to {
+    transform: rotate(-15deg);
+  }
 }
 
 
@@ -58,13 +74,22 @@ body {
 }
 #placar {
   display: none;
+  position: absolute;
+  float:right;
+  width: 45vh;
+  height: 70%;
+  background-color:#171616;
+  border-radius: 10%;
+  margin: 20px
 }
 #sobre {
   display: none;
+  position: absolute;
   float:left;
   width: 45vh;
-  height: 60%;
-  background-color:black;
+  height: 100%;
+  background-color:#171616;
+  border-radius: 10%;
 }
 #sobre p {
   text-align: center;
@@ -73,7 +98,7 @@ body {
 }
 #sobre h2 {
   text-align: center;
-  color:rgb(36, 31, 31);
+  color:#ffffff;
   padding-top: 2%;
 }
 
