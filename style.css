@@ -25,9 +25,13 @@ body {
 color: white;
 font-family: 'Oswald', sans-serif;
 font-size: 16pt;
-position: absolute;
-right: 30px;
-top: 10px;
+}
+#container-musica{
+  display:flex;
+  align-items: center;
+  position: absolute;
+  right: 30px;
+  top: 10px;
 }
 #titulo h1 {
 font-family: 'Righteous', cursive;
@@ -76,32 +80,48 @@ to {
   filter: invert(1);
   padding-top: 150px;
 }
+/*Placar */
+
 #placar {
-position: absolute;
-float:right;
-width: 45vh;
-height: 70%;
-background-color:#171616;
-border-radius: 10%;
-margin: 20px
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  float:right;
+  width: 45vh;
+  height: 70%;
+  background-color:#171616;
+  border-radius: 10%;
+  margin: 2vh;
+  z-index: 1;
 }
+#placar h1{
+  text-align: center;
+  font-size: 5vh;
+  text-decoration: underline;
+  color:#ffffff;
+}
+
+/*Sobre */
 #sobre{
-position: absolute;
-float:left;
-width: 45vh;
-height: 100%;
-background-color:#171616;
-border-radius: 10%;
+  position: absolute;
+  float:left;
+  width: 45vh;
+  height: 100%;
+  background-color:#171616;
+  border-radius: 10%;
+  z-index: 1;
+  margin-left: 3vh;
 }
 #sobre p {
-text-align: center;
-color:burlywood;
-padding: 2% 7% 2% 7%;
+  text-align: center;
+  color:burlywood;
+  padding: 2% 7% 2% 7%;
 }
 #sobre h2 {
-text-align: center;
-color:#ffffff;
-padding-top: 2%;
+  text-align: center;
+  color:#ffffff;
+  padding-top: 2%;
 }
 
 /* perfil*/
@@ -120,8 +140,9 @@ padding-top: 2%;
   position: absolute;
   width: 100vh;
   height: 100%;
-  background-color: red;
-  border-radius: 10%; 
+  background-color: #171616;
+  border-radius: 10%;
+  z-index: 1;
 }
 
 /*AI MEUS OLHOSSSSSSSSSSSSSSSSSS*/
