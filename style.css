@@ -143,7 +143,6 @@ ul li:last-child {
 
 #logo {
     width: 20vh;
-    height: 20vh;
     filter: invert(1);
     padding-top: 150px;
 }
