@@ -6,6 +6,12 @@ body {
   margin: 0;
   min-height: 100%;
 }
+/* geral ->>>*/
+.botoesDiv,
+#perfil{
+  cursor:pointer;
+}
+/* começo */
 #bodyInicial{
   background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapercave.com%2Fwp%2Fwp2508495.jpg&f=1&nofb=1&ipt=aee8d3a84421f0fa24cf3d8998766d378de9c87eeec68426eec7232f8341051c&ipo=images);
   background-size: cover;
@@ -39,17 +45,16 @@ color: #e5ffbb;
   text-decoration: none;
 }
 #titulo p {
-display: inline-block;
-font-family: 'Bebas Neue', cursive;
-font-size: 4vh;
-text-shadow: -5px 4px 14px rgb(26, 105, 119);
-color: white;
-text-decoration: none;
-margin: 0;
+  display: inline-block;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 4vh;
+  text-shadow: -5px 4px 14px rgb(26, 105, 119);
+  color: white;
+  text-decoration: none;
+  margin: 0;
 }
 .botoesDiv:hover {
 animation: girando 1s ease-in-out 0s infinite alternate;
-cursor:pointer;
 }
 
 @keyframes girando {
@@ -72,7 +77,6 @@ to {
   padding-top: 150px;
 }
 #placar {
-display: none;
 position: absolute;
 float:right;
 width: 45vh;
@@ -82,7 +86,6 @@ border-radius: 10%;
 margin: 20px
 }
 #sobre{
-display: none;
 position: absolute;
 float:left;
 width: 45vh;
@@ -107,8 +110,18 @@ padding-top: 2%;
   float:right;
   width: 8vh;
   height: 8vh;
-  background-color: rgb(202, 202, 111);
+  background-color: rgba(255, 255, 255, 0.863);
   border-radius: 100%;
+  margin: 1vh;
+}
+#container-perfil{
+  display:flex;
+  justify-content: center;
+  position: absolute;
+  width: 100vh;
+  height: 100%;
+  background-color: red;
+  border-radius: 10%; 
 }
 
 /*AI MEUS OLHOSSSSSSSSSSSSSSSSSS*/
@@ -167,3 +180,16 @@ background-color: rosybrown;
 }
 
 /*FIM BOTAO TROCA TEMA*/
+
+
+
+/*MEDIA QUERY CELULAR */
+@media (max-width: 600px){
+  body{
+    display:flex;
+    flex-direction: column;
+  }
+  #perfil{
+    background-color: red;
+  }
+}

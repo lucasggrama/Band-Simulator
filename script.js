@@ -58,9 +58,13 @@ audio.play();
 // fim audio
 
 // botoes
+$('#sobre').css({display: "none"});
+$('#container-perfil').css({display: "none"});
+$('#placar').css({display: "none"});
+
 function aparecerDiv(e){
     if(e.currentTarget.innerHTML == "Sobre"){
-        if(sobreEl.style.display == "none" || contador == 0)
+        if(sobreEl.style.display == "none")
             sobreEl.style.display = "block";
         else
         sobreEl.style.display = "none";
@@ -72,22 +76,24 @@ function aparecerDiv(e){
             placarEl.style.display = "none";
     }
     else{
-        if(sobreEl.style.display == "none")
-            sobreEl.style.display = "block";
+        if(perfilEL.style.display == "none")
+            perfilEL.style.display = "block";
         else
-            sobreEl.style.display = "none";
+            perfilEL.style.display = "none";
     }
 }
+
 let contador = 0;
 let botaoDiv = document.querySelectorAll('.botoesDiv');
 let sobreEl = document.querySelector('#sobre');
 let placarEl = document.querySelector('#placar');
+let perfilEL = document.querySelector('#container-perfil');
 
 for(botoes of botaoDiv){
     botoes.addEventListener('click', aparecerDiv);
-} 
+}
 
-$('#fechar-ajuda').click();
 let botaoPerfil = document.querySelector('#perfil');
+botaoPerfil.addEventListener('click', aparecerDiv);
 
 // fim botoes
