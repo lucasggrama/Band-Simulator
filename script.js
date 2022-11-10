@@ -48,6 +48,9 @@ let opçõesPerfil = [
     },
     {
         imagem: './imgs/metallicaPerfil.jpg'
+    },
+    {
+        imagem: './imgs/pngegg.png'
     }
 ]
 let perfisDeUsuario = [
