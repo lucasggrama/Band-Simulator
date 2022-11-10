@@ -33,6 +33,26 @@ let bandas = [
         link: 'https://www.youtube.com/watch?v=A8MO7fkZc5o'
     },
 ]
+let opçõesPerfil = [
+    {
+        imagem: './imgs/ghostPerfil.jpg'
+    },
+    {
+        imagem: './imgs/stonesPerfil.jpg'
+    },
+    {
+        imagem: './imgs/mayhemPerfil.jpg'
+    },
+    {
+        imagem: './imgs/queenPerfil.jpg'
+    },
+    {
+        imagem: './imgs/stonesPerfil.jpg'
+    },
+    {
+        imagem: './imgs/metallicaPerfil.jpg'
+    }
+]
 let volumeEl = document.querySelector("#reproducao-musica");
 volumeEl.volume = 0.2;
 
@@ -138,15 +158,15 @@ imagemPadrao(imagens,'imgs/pngegg.png');
 function criaPerfil(){
     seuNome.innerHTML = inputNome.value;
     if(j == 0){
-        imagemPadrao(imagens, bandas[bandas.length-1].imagem);
+        imagemPadrao(imagens, opçõesPerfil[opçõesPerfil.length-1].imagem);
     }
     else{
-        imagemPadrao(imagens, bandas[j-1].imagem);
+        imagemPadrao(imagens, opçõesPerfil[j-1].imagem);
     }
 }
 function switchImage(){
-    imagemPreviewEl.src = bandas[j].imagem;
-    if(j == bandas.length-1)
+    imagemPreviewEl.src = opçõesPerfil[j].imagem;
+    if(j == opçõesPerfil.length-1)
         j = 0;
     else
         j++;
