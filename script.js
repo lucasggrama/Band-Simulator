@@ -116,23 +116,34 @@ function alteraImagemPerfil(){
 let imagemPerfil = document.querySelector('#imagemPerfil');
 imagemPerfil.addEventListener('click', alteraImagemPerfil);
 
-function imagemPadrao(imagemVetor){
+function imagemPadrao(imagemVetor, string){
     for(imagem of imagemVetor){
-        imagem.src = 'imgs/pngegg.png';
+        imagem.src = string;
     }
 }
 
-let imagems = document.querySelectorAll('.imagemDoPerfil');
-imagemPadrao(imagems);
+let imagens = document.querySelectorAll('.imagemDoPerfil');
+imagemPadrao(imagens,'imgs/pngegg.png');
 
 // criar perfil
 
 
-function criarNome(){
+function criaPerfil(){
     seuNome.innerHTML = inputNome.value;
+    imagemPadrao(imagens, bandas[j].imagem);
 }
-
-let inputNome = document.querySelector('#nomePerfil')
+function switchImage(){
+    imagemPreviewEl.src = bandas[j].imagem;
+    j++;
+    if(j == 4)
+        j = 0;
+    else
+        j++;
+}
+let j = 0;
+let inputNome = document.querySelector('#nomePerfil');
 let seuNome = document.querySelector('#nomeAlteravel');
-
+let imagemPreviewEl = document.querySelector('#previewPerfil')
+$('#confirma-perfil').click(criaPerfil);
+$('#switcher-imagem').click(switchImage)
 // fim criar perfil
