@@ -47,11 +47,15 @@ let opçõesPerfil = [
         imagem: './imgs/queenPerfil.jpg'
     },
     {
-        imagem: './imgs/stonesPerfil.jpg'
-    },
-    {
         imagem: './imgs/metallicaPerfil.jpg'
     }
+]
+let perfisDeUsuario = [
+    {
+        imagem:'',
+        nome: ''
+    },
+
 ]
 let volumeEl = document.querySelector("#reproducao-musica");
 volumeEl.volume = 0.2;
@@ -153,8 +157,6 @@ let imagens = document.querySelectorAll('.imagemDoPerfil');
 imagemPadrao(imagens,'imgs/pngegg.png');
 
 // criar perfil
-
-
 function criaPerfil(){
     seuNome.innerHTML = inputNome.value;
     if(j == 0){

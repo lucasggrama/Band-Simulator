@@ -157,6 +157,8 @@ to {
   background-color: rgba(255, 255, 255, 0.863);
   border-radius: 100%;
   margin: 1vh;
+  border-style: solid;
+  border-width: 2px;
 }
 #container-perfil{
   display:flex;
