@@ -136,7 +136,7 @@ to {
 }
 #container-perfil{
   display:flex;
-  justify-content: center;
+  justify-content:space-between;
   position: absolute;
   width: 100vh;
   height: 100%;
@@ -144,63 +144,16 @@ to {
   border-radius: 10%;
   z-index: 1;
 }
-
-/*AI MEUS OLHOSSSSSSSSSSSSSSSSSS*/
-/* BOTAO TROCA TEMA*/
-
-img,
-iframe {
-position: center;
-
+#imagemPerfil{
+  border-radius: 100%;
+  width: 30vh;
+  height: 30vh;
+  margin: 20px;
+  background-color:#ffffff;
+  border-style: solid;
+  border-color:#051428;
+  border-width: 1vh;
 }
-
-.theme-switcher {
-position: absolute;
-right: 30px;
-}
-
-input {
-width: 0;
-height: 0;
-display: none;
-visibility: hidden;
-}
-
-label {
-cursor: pointer;
-display: block;
-text-indent: -9999px;
-height: 30px;
-width: 60px;
-border-radius: 50px;
-background-color: #051428;
-transition: 0.5s ease background-color;
-}
-
-label::after {
-position: absolute;
-content: "";
-width: 20px;
-height: 20px;
-border-radius: 50px;
-top: 50%;
-left: 5px;
-transform: translateY(-50%);
-background-color: #faebd7;
-transition: 0.5s ease;
-}
-
-input:checked+label::after {
-/* left: calc(100% - 2.5px); */
-left: calc(100% - 25px);
-background-color: antiquewhite;
-}
-
-input:checked+label {
-background-color: rosybrown;
-}
-
-/*FIM BOTAO TROCA TEMA*/
 
 
 

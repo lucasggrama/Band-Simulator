@@ -75,7 +75,7 @@ function aparecerDiv(e){
         else
             placarEl.style.display = "none";
     }
-    else{
+    else if(e.currentTarget.innerHTML != "Jogar"){
         if(perfilEL.style.display == "none")
             perfilEL.style.display = "block";
         else
@@ -97,3 +97,9 @@ let botaoPerfil = document.querySelector('#perfil');
 botaoPerfil.addEventListener('click', aparecerDiv);
 
 // fim botoes
+function alteraImagemPerfil(){
+    imagemPerfil.src = bandas[i].imagem;
+}
+
+let imagemPerfil = document.querySelector('#imagemPerfil')
+imagemPerfil.addEventListener('click', alteraImagemPerfil)
