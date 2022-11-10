@@ -115,7 +115,7 @@ function aparecerDiv(e){
     }
     else if(e.currentTarget.innerHTML != "Jogar"){
         if(perfilEL.style.display == "none")
-            perfilEL.style.display = "block";
+            perfilEL.style.display = "grid";
         else
             perfilEL.style.display = "none";
     }
