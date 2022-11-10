@@ -130,7 +130,7 @@ imagemPadrao(imagens,'imgs/pngegg.png');
 
 function criaPerfil(){
     seuNome.innerHTML = inputNome.value;
-    imagemPadrao(imagens, bandas[j].imagem);
+    imagemPadrao(imagens, bandas[j-1].imagem);
 }
 function switchImage(){
     imagemPreviewEl.src = bandas[j].imagem;
