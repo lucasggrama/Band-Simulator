@@ -61,6 +61,7 @@ audio.play();
 $('#sobre').css({display: "none"});
 $('#container-perfil').css({display: "none"});
 $('#placar').css({display: "none"});
+$('#newPerfil').css({display: "none"});
 
 function aparecerDiv(e){
     if(e.currentTarget.innerHTML == "Sobre"){
@@ -75,6 +76,12 @@ function aparecerDiv(e){
         else
             placarEl.style.display = "none";
     }
+    else if(e.currentTarget.classList == "botaoPequeno"){
+        if(perfilNovoEl.style.display == "none")
+            perfilNovoEl.style.display = "block";
+        else
+            perfilNovoEl.style.display = "none";
+    }
     else if(e.currentTarget.innerHTML != "Jogar"){
         if(perfilEL.style.display == "none")
             perfilEL.style.display = "block";
@@ -83,18 +90,21 @@ function aparecerDiv(e){
     }
 }
 
-let contador = 0;
 let botaoDiv = document.querySelectorAll('.botoesDiv');
 let sobreEl = document.querySelector('#sobre');
 let placarEl = document.querySelector('#placar');
 let perfilEL = document.querySelector('#container-perfil');
+let perfilNovoEl = document.querySelector('#newPerfil');
 
 for(botoes of botaoDiv){
     botoes.addEventListener('click', aparecerDiv);
 }
 
 let botaoPerfil = document.querySelector('#perfil');
+let botaoNewPerfil = document.querySelector('#novoPerfil')
 botaoPerfil.addEventListener('click', aparecerDiv);
+botaoNewPerfil.addEventListener('click', aparecerDiv);
+
 
 // fim botoes
 function alteraImagemPerfil(){

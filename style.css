@@ -11,6 +11,19 @@ body {
 #perfil{
   cursor:pointer;
 }
+.botaoPequeno {
+  padding: 6px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 100%;
+  border: 1px #ffffff solid;
+  color: #ffffff;
+  background-color: rgba(23, 22, 22, 0);
+  cursor: pointer;
+}
+.botaoPequeno:hover {
+  transform: translate(2px, 2px);
+}
 /* começo */
 #bodyInicial{
   background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapercave.com%2Fwp%2Fwp2508495.jpg&f=1&nofb=1&ipt=aee8d3a84421f0fa24cf3d8998766d378de9c87eeec68426eec7232f8341051c&ipo=images);
@@ -125,7 +138,7 @@ to {
 }
 
 /* perfil*/
-#perfil{
+#perfil img{
   position:absolute;
   float:right;
   width: 8vh;
@@ -153,6 +166,17 @@ to {
   border-style: solid;
   border-color:#051428;
   border-width: 1vh;
+}
+#container-perfil span{
+  text-align: center;
+  width: 50vh;
+  height: 100px;
+  background-color: #051428;
+  border-radius: 10%;
+}
+#container-perfil span>h2{
+  color:white;
+  text-decoration: underline;
 }
 
 

@@ -3,7 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="style.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
@@ -16,6 +19,17 @@
 
 
 <body id="bodyInicial">
+
+    <header>
+        <buttom id="perfil">
+            <img src="imgs/pngegg.png">
+        </buttom>
+        <div id="container-musica">
+            <img src="./imgs/giphy.gif" height="30" width="30"/>
+            <i id="musica"></i>
+        </div>
+    </header>
+
     <div id="sobre">
         <h2>Lucas Grama</h2>
         <p> Meu nome é Lucas Grama tenho 16 anos. Sou fã́ de series de misterio , sendo Dark minha preferida. Amo rock
@@ -27,17 +41,23 @@
         <h2>Miguel</h2>
         <p>Sou preguiçoso e não quero fazer o sobre</p>
     </div>
-    <img id="perfil" src="imgs/pngegg.png">
+
     <div id="container-perfil">
         <img id="imagemPerfil" src="./imgs/pngegg.png">
-        <nav>
+        <button id="novoPerfil" class="botaoPequeno">
+            <i class="fa fa-plus" aria-hidden="true"></i>
+        </button>
+        <span id="newPerfil">
+            <h2>Novo Perfil</h2>
             <label><input type="text" placeholder="Digite o nome do seu Perfil"id="nomePerfil"></label>
-        </nav>
+        </span>
     </div>
+
     <div id="placar">
         <h1>Classificação</h1>
 
     </div>
+
     <div id="conteudo-principal">
         <img id=logo src="imgs/logo.png" width="100px">
         <div id=titulo>
@@ -51,10 +71,7 @@
             </h2>
         </div>
     </div>
-    <div id="container-musica">
-        <img src="./imgs/giphy.gif" height="30" width="30"/>
-        <i id="musica"></i>
-    </div>
+
     <audio autoplay loop="loop" id="reproducao-musica" src="audio/metallica.mp3" preload="auto"></audio>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
