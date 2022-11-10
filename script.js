@@ -134,7 +134,6 @@ function criaPerfil(){
 }
 function switchImage(){
     imagemPreviewEl.src = bandas[j].imagem;
-    j++;
     if(j == 4)
         j = 0;
     else
