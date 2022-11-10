@@ -5,27 +5,32 @@ let bandas = [
     {
         imagem: './imgs/ghost.png',
         musica: 'Dance Macabre - Ghost',
-        audio: 'audio/ghost.mp3'
+        audio: 'audio/ghost.mp3',
+        link: 'https://www.youtube.com/watch?v=aGUwV0yS-L4'
     },
     {
         imagem: './imgs/stones.png',
         musica: 'Paint it, Black - The Rolling Stones',
-        audio: 'audio/stones.mp3'
+        audio: 'audio/stones.mp3',
+        link: 'https://www.youtube.com/watch?v=O4irXQhgMqg'
     },
     {
         imagem: './imgs/mayhem.png',
         musica: 'Freezing Moon - Mayhem',
-        audio: 'audio/mayhem.mp3'
+        audio: 'audio/mayhem.mp3',
+        link: 'https://www.youtube.com/watch?v=9emO9qo4FwE'
     },
     {
         imagem: './imgs/queen.png',
         musica: 'Don`t Stop Me Now - Queen',
-        audio: 'audio/queen.mp3'
+        audio: 'audio/queen.mp3',
+        link: 'https://www.youtube.com/watch?v=HgzGwKwLmgM'
     },
     {
         imagem: './imgs/metallica.png',
         musica: 'Sad But True - Metallica',
-        audio: 'audio/metallica.mp3'
+        audio: 'audio/metallica.mp3',
+        link: 'https://www.youtube.com/watch?v=A8MO7fkZc5o'
     },
 ]
 let volumeEl = document.querySelector("#reproducao-musica");
@@ -45,7 +50,9 @@ geraNovamente();
 
 localStorage.setItem('imagemAleatoria', i);
 let imagemBackground = document.querySelector('#bodyInicial');
+let musicaLink = document.querySelector('#musica')
 imagemBackground.style.backgroundImage = `url(${bandas[i].imagem})`;
+musicaLink.href = bandas[i].link;
 
 //audio
 

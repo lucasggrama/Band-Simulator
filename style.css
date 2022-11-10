@@ -38,9 +38,11 @@ body {
   min-height: 100%;
 }
 #musica {
-color: white;
-font-family: 'Oswald', sans-serif;
-font-size: 16pt;
+  font-style: italic;
+  color: white;
+  font-family: 'Oswald', sans-serif;
+  font-size: 16pt;
+  text-decoration: none;
 }
 #container-musica{
   display:flex;
@@ -159,6 +161,11 @@ to {
   background-color: #171616;
   border-radius: 10%;
   z-index: 1;
+  margin-left: 100px;
+}
+#container-perfil p {
+  color: #ffffff;
+  text-decoration: underline;
 }
 #imagemPerfil{
   border-radius: 100%;
