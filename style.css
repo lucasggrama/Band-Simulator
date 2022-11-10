@@ -47,10 +47,10 @@ font-size: 16pt;
   top: 10px;
 }
 #titulo h1 {
-font-family: 'Righteous', cursive;
-font-size: 6vh;
-text-shadow: 2px 4px 14px rgba(72,0,255,0.6);
-color: #e5ffbb;
+  font-family: 'Righteous', cursive;
+  font-size: 6vh;
+  text-shadow: 2px 4px 14px rgba(72,0,255,0.6);
+  color: #e5ffbb;
 }
 
 #titulo a {
@@ -71,7 +71,7 @@ color: #e5ffbb;
   margin: 0;
 }
 .botoesDiv:hover {
-animation: girando 1s ease-in-out 0s infinite alternate;
+  animation: girando 1s ease-in-out 0s infinite alternate;
 }
 
 @keyframes girando {
@@ -168,9 +168,11 @@ to {
   border-width: 1vh;
 }
 #container-perfil span{
+  display: flex;
+  flex-direction: column;
   text-align: center;
   width: 50vh;
-  height: 100px;
+  height: 200px;
   background-color: #051428;
   border-radius: 10%;
 }
@@ -178,7 +180,15 @@ to {
   color:white;
   text-decoration: underline;
 }
-
+#container-perfil span>label{
+  color:white;
+  margin-left: 10px;
+}
+#container-perfil span>img{
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+}
 
 
 /*MEDIA QUERY CELULAR */

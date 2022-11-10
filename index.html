@@ -22,7 +22,7 @@
 
     <header>
         <buttom id="perfil">
-            <img src="imgs/pngegg.png">
+            <img class="imagemDoPerfil" src="imgs/pngegg.png">
         </buttom>
         <div id="container-musica">
             <img src="./imgs/giphy.gif" height="30" width="30"/>
@@ -43,13 +43,19 @@
     </div>
 
     <div id="container-perfil">
-        <img id="imagemPerfil" src="./imgs/pngegg.png">
+
+        <img id="imagemPerfil" class="imagemDoPerfil" src="./imgs/pngegg.png">
+        <p id="nomeAlteravel">Exoticlucas</p>
         <button id="novoPerfil" class="botaoPequeno">
             <i class="fa fa-plus" aria-hidden="true"></i>
         </button>
+
         <span id="newPerfil">
             <h2>Novo Perfil</h2>
-            <label><input type="text" placeholder="Digite o nome do seu Perfil"id="nomePerfil"></label>
+            <img class="imagemDoPerfil">
+            <label> Novo nome: <input type="text" placeholder="Digite o nome do seu Perfil"id="nomePerfil"></label>
+            <buttom><i class="fa fa-camera" aria-hidden="true"></i></buttom>
+            <buttom><i class="fa fa-check-circle-o" class="botaoPequeno" aria-hidden="true"></i></buttom>
         </span>
     </div>
 

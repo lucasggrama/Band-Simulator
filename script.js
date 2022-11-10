@@ -107,9 +107,32 @@ botaoNewPerfil.addEventListener('click', aparecerDiv);
 
 
 // fim botoes
+// altera imagens
+
 function alteraImagemPerfil(){
     imagemPerfil.src = bandas[i].imagem;
 }
 
-let imagemPerfil = document.querySelector('#imagemPerfil')
-imagemPerfil.addEventListener('click', alteraImagemPerfil)
+let imagemPerfil = document.querySelector('#imagemPerfil');
+imagemPerfil.addEventListener('click', alteraImagemPerfil);
+
+function imagemPadrao(imagemVetor){
+    for(imagem of imagemVetor){
+        imagem.src = 'imgs/pngegg.png';
+    }
+}
+
+let imagems = document.querySelectorAll('.imagemDoPerfil');
+imagemPadrao(imagems);
+
+// criar perfil
+
+
+function criarNome(){
+    seuNome.innerHTML = inputNome.value;
+}
+
+let inputNome = document.querySelector('#nomePerfil')
+let seuNome = document.querySelector('#nomeAlteravel');
+
+// fim criar perfil
