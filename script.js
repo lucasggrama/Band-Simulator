@@ -81,7 +81,7 @@ let musicaLink = document.querySelector('#musica')
 imagemBackground.style.backgroundImage = `url(${bandas[i].imagem})`;
 musicaLink.href = bandas[i].link;
 
-//audio
+//   ------------------------------------- audio ---------------------------------------------------------
 
 let musica = document.querySelector('#musica');
 let audio = document.querySelector('audio');
@@ -89,9 +89,7 @@ musica.innerHTML = bandas[i].musica;
 audio.src = bandas[i].audio;
 audio.play();
 
-// fim audio
-
-// botoes
+// ------------------------------------- botoes ---------------------------------------------------------
 $('#sobre').css({display: "none"});
 $('#container-perfil').css({display: "none"});
 $('#placar').css({display: "none"});
@@ -141,7 +139,7 @@ botaoNewPerfil.addEventListener('click', aparecerDiv);
 
 
 // fim botoes
-// altera imagens
+// ------------------------------------- Imagens ---------------------------------------------------------
 
 function alteraImagemPerfil(){
     imagemPerfil.src = bandas[i].imagem;
@@ -159,7 +157,7 @@ function imagemPadrao(imagemVetor, string){
 let imagens = document.querySelectorAll('.imagemDoPerfil');
 imagemPadrao(imagens,'imgs/pngegg.png');
 
-// criar perfil
+// ------------------------------------- criar Perfil ---------------------------------------------------------
 function criaPerfil(){
     seuNome.innerHTML = inputNome.value;
     if(j == 0){

@@ -6,7 +6,7 @@ body {
   margin: 0;
   min-height: 100%;
 }
-/* geral ->>>*/
+/* --------------------------------------------- geral --------------------------------------------------*/
 .botoesDiv,
 #perfil{
   cursor:pointer;
@@ -33,7 +33,7 @@ body {
   border-width: 1px;
   border-style: solid;
 }
-/* começo */
+/* --------------------------------------------- começo --------------------------------------------------*/
 #bodyInicial{
   background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapercave.com%2Fwp%2Fwp2508495.jpg&f=1&nofb=1&ipt=aee8d3a84421f0fa24cf3d8998766d378de9c87eeec68426eec7232f8341051c&ipo=images);
   background-size: cover;
@@ -42,20 +42,6 @@ body {
   background-attachment: fixed;
   margin: 0;
   min-height: 100%;
-}
-#musica {
-  font-style: italic;
-  color: white;
-  font-family: 'Oswald', sans-serif;
-  font-size: 16pt;
-  text-decoration: none;
-}
-#container-musica{
-  display:flex;
-  align-items: center;
-  position: absolute;
-  right: 30px;
-  top: 10px;
 }
 #titulo h1 {
   font-family: 'Righteous', cursive;
@@ -104,7 +90,22 @@ to {
   filter: invert(1);
   padding-top: 150px;
 }
-/*Placar */
+/* --------------------------------------------- musica --------------------------------------------------*/
+#musica {
+  font-style: italic;
+  color: white;
+  font-family: 'Oswald', sans-serif;
+  font-size: 16pt;
+  text-decoration: none;
+}
+#container-musica{
+  display:flex;
+  align-items: center;
+  position: absolute;
+  right: 30px;
+  top: 10px;
+}
+/* --------------------------------------------- Placar --------------------------------------------------*/
 
 #placar {
   display:flex;
@@ -126,7 +127,7 @@ to {
   color:#ffffff;
 }
 
-/*Sobre */
+/* --------------------------------------------- Sobre --------------------------------------------------*/
 #sobre{
   position: absolute;
   float:left;
@@ -148,7 +149,7 @@ to {
   padding-top: 2%;
 }
 
-/* perfil*/
+/* --------------------------------------------- Perfil --------------------------------------------------*/
 #perfil img{
   position:absolute;
   float:right;
@@ -219,7 +220,7 @@ to {
 }
 
 
-/*MEDIA QUERY CELULAR */
+/* --------------------------------------------- Media Query --------------------------------------------------*/
 @media (max-width: 600px){
   body{
     display:flex;
