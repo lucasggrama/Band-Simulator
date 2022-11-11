@@ -1,7 +1,7 @@
 const teclaPiano = document.querySelectorAll('.tecla');
 function tocar(id) {
     console.log(id);
-    let url = 'piano/key' + id + '.mp3';
+    let url = 'piano/' + id + '.mp3';
     new Audio(url).play();
 }
 function teste(number) {
