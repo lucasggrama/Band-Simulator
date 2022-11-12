@@ -43,7 +43,9 @@ body {
   border: solid #000 2px;
   box-sizing: border-box;
 }
-
+.tocando {
+  background-color: blue;
+}
 .preta:nth-child(1) {
   left: 48px;
 }
