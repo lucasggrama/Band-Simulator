@@ -160,12 +160,33 @@ imagemPadrao(imagens, 'imgs/pngegg.png');
 // ------------------------------------- criar Perfil ---------------------------------------------------------
 function criaPerfil() {
     seuNome.innerHTML = inputNome.value;
+    let imgAdd;
     if (j == 0) {
         imagemPadrao(imagens, opçõesPerfil[opçõesPerfil.length - 1].imagem);
+        imgAdd = opçõesPerfil[opçõesPerfil.length - 1].imagem;
     }
     else {
         imagemPadrao(imagens, opçõesPerfil[j - 1].imagem);
+        imgAdd = opçõesPerfil[j - 1].imagem;
     }
+
+    // Container do novo Perfil
+    let containerPerfis = document.querySelector('#container-perfils-salvos')
+    let novoPerfil = document.createElement('div');
+    containerPerfis.appendChild(novoPerfil);
+    novoPerfil.classList.add('perfilAdd');
+
+    // imagem do novo Perfil
+    let novaImagem = document.createElement('img');
+    novaImagem.src = imgAdd;
+    novoPerfil.appendChild(novaImagem);
+    novaImagem.classList.add('imagemPerfisSalva');
+
+    // nome do novo Perfil
+    let novoNome = document.createElement('p');
+    novoNome.innerHTML = inputNome.value;
+    novoPerfil.appendChild(novoNome);
+    novoNome.classList.add('textoPerfilAdd');
 }
 function switchImage() {
     imagemPreviewEl.src = opçõesPerfil[j].imagem;

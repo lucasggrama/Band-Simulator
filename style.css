@@ -211,7 +211,7 @@ body {
   text-align: center;
   width: 33vh;
   height: 53vh;
-  background-color: #051428;
+  background-color: rgb(15, 15, 15);/*#051428*/
   border-radius: 3%;
   border-color: #ffffff;
   border-width: 1px;
@@ -223,9 +223,15 @@ body {
   grid-row: 1;
   grid-column: 2/3;
   margin-left: 5vh;
+  margin-top: 1vh;
+  background-color: rgb(15, 15, 15);
+  border-radius: 10%;
+  width: 50vh;
 }
 
-#container-perfil p {
+#container-perfil p,
+li{
+  font-family: 'Mulish', sans-serif;
   color: #ffffff;
   text-decoration: underline;
 }
@@ -238,7 +244,7 @@ body {
   height: 30vh;
   margin: 20px;
   background-color: #ffffff;
-  border-style: solid;
+  border-style: dotted;
   border-color: #051428;
   border-width: 1vh;
 }
@@ -257,6 +263,30 @@ body {
   border-radius: 100%;
   width: 50px;
   height: 50px;
+}
+#container-perfils-salvos{
+  overflow-y: scroll;
+}
+.imagemPerfisSalva{
+  width: 8vh;
+  height: 8vh;
+  border-radius: 100%;
+}
+.perfilAdd{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 5%;
+  margin: 5px 10px 5px;
+  padding: 3px;
+  border: 1px #051428 solid;
+  border-radius: 5%;
+  box-sizing: border-box;
+  background-color: blue;
+}
+.textoPerfilAdd{
+  margin: 3px;
 }
 
 
