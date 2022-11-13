@@ -187,6 +187,7 @@ function criaPerfil() {
     novoNome.innerHTML = inputNome.value;
     novoPerfil.appendChild(novoNome);
     novoNome.classList.add('textoPerfilAdd');
+
 }
 function switchImage() {
     imagemPreviewEl.src = opçõesPerfil[j].imagem;
@@ -202,3 +203,13 @@ let imagemPreviewEl = document.querySelector('#previewPerfil')
 $('#confirma-perfil').click(criaPerfil);
 $('#switcher-imagem').click(switchImage)
 // fim criar perfil
+// selecionar Perfil
+function selecionado(e){
+    e.currentTarget.classList.add('perfilSelecionado');
+    alert('cu');
+}
+let perfisSalvos = document.querySelectorAll('perfilAdd');
+for(perfil of perfisSalvos){
+    perfil.addEventListener('click',selecionado);
+}
+// DEPOIS TENTAR CRIAR UM OBJETO COM AS INFORMAÇÕES DO PERFIL;
