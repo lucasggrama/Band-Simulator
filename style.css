@@ -6,11 +6,13 @@ body {
   margin: 0;
   min-height: 100%;
 }
+
 /* --------------------------------------------- geral --------------------------------------------------*/
 .botoesDiv,
-#perfil{
-  cursor:pointer;
+#perfil {
+  cursor: pointer;
 }
+
 .botaoPequeno {
   padding: 6px;
   padding-left: 8px;
@@ -21,20 +23,24 @@ body {
   background-color: rgba(23, 22, 22, 0);
   cursor: pointer;
 }
+
 .botaoPequeno:hover {
   transform: translate(2px, 2px);
 }
-.imagemDoPerfil{
-  background-color:#ffffff;
+
+.imagemDoPerfil {
+  background-color: #ffffff;
   border-radius: 100%;
 }
-#previewPerfil{
+
+#previewPerfil {
   border-color: #ffffff;
   border-width: 1px;
   border-style: solid;
 }
+
 /* --------------------------------------------- começo --------------------------------------------------*/
-#bodyInicial{
+#bodyInicial {
   background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapercave.com%2Fwp%2Fwp2508495.jpg&f=1&nofb=1&ipt=aee8d3a84421f0fa24cf3d8998766d378de9c87eeec68426eec7232f8341051c&ipo=images);
   background-size: cover;
   background-repeat: no-repeat;
@@ -43,10 +49,11 @@ body {
   margin: 0;
   min-height: 100%;
 }
+
 #titulo h1 {
   font-family: 'Righteous', cursive;
   font-size: 6vh;
-  text-shadow: 2px 4px 14px rgba(72,0,255,0.6);
+  text-shadow: 2px 4px 14px rgba(72, 0, 255, 0.6);
   color: #e5ffbb;
 }
 
@@ -58,6 +65,7 @@ body {
   color: white;
   text-decoration: none;
 }
+
 #titulo p {
   display: inline-block;
   font-family: 'Bebas Neue', cursive;
@@ -67,17 +75,19 @@ body {
   text-decoration: none;
   margin: 0;
 }
+
 .botoesDiv:hover {
   animation: girando 1s ease-in-out 0s infinite alternate;
 }
 
 @keyframes girando {
-from {
-  transform: rotate(15deg);
-}
-to {
-  transform: rotate(-15deg);
-}
+  from {
+    transform: rotate(15deg);
+  }
+
+  to {
+    transform: rotate(-15deg);
+  }
 }
 
 
@@ -90,6 +100,7 @@ to {
   filter: invert(1);
   padding-top: 150px;
 }
+
 /* --------------------------------------------- musica --------------------------------------------------*/
 #musica {
   font-style: italic;
@@ -98,61 +109,66 @@ to {
   font-size: 16pt;
   text-decoration: none;
 }
-#container-musica{
-  display:flex;
+
+#container-musica {
+  display: flex;
   align-items: center;
   position: absolute;
   right: 30px;
   top: 10px;
 }
+
 /* --------------------------------------------- Placar --------------------------------------------------*/
 
 #placar {
-  display:flex;
+  display: flex;
   justify-content: center;
   flex-direction: column;
   position: absolute;
-  float:right;
+  float: right;
   width: 45vh;
   height: 70%;
-  background-color:#171616;
+  background-color: #171616;
   border-radius: 10%;
   margin: 2vh;
   z-index: 1;
 }
-#placar h1{
+
+#placar h1 {
   text-align: center;
   font-size: 5vh;
   text-decoration: underline;
-  color:#ffffff;
+  color: #ffffff;
 }
 
 /* --------------------------------------------- Sobre --------------------------------------------------*/
-#sobre{
+#sobre {
   position: absolute;
-  float:left;
+  float: left;
   width: 45vh;
   height: 100%;
-  background-color:#171616;
+  background-color: #171616;
   border-radius: 10%;
   z-index: 1;
   margin-left: 3vh;
 }
+
 #sobre p {
   text-align: center;
-  color:burlywood;
+  color: burlywood;
   padding: 2% 7% 2% 7%;
 }
+
 #sobre h2 {
   text-align: center;
-  color:#ffffff;
+  color: #ffffff;
   padding-top: 2%;
 }
 
 /* --------------------------------------------- Perfil --------------------------------------------------*/
-#perfil img{
-  position:absolute;
-  float:right;
+#perfil img {
+  position: absolute;
+  float: right;
   width: 8vh;
   height: 8vh;
   background-color: rgba(255, 255, 255, 0.863);
@@ -161,7 +177,8 @@ to {
   border-style: solid;
   border-width: 2px;
 }
-#container-perfil{
+
+#container-perfil {
   display: grid;
   grid-template-rows: 33% 33% 33%;
   grid-template-columns: 33% 33% 33%;
@@ -173,15 +190,19 @@ to {
   z-index: 1;
   margin-left: 100px;
 }
-#container-perfils-salvos{
+
+#container-perfils-salvos {
   margin-left: 5vh;
 }
-#newPerfil{
+
+#newPerfil {
   grid-row: 2/3;
   grid-column: 2;
   margin-left: 10vh;
 }
-.containers-footer-perfil{ /*trocar para uma classe no futuro */
+
+.containers-footer-perfil {
+  /*trocar para uma classe no futuro */
   grid-row: 2/3;
   grid-column: 1;
   margin-top: 5vh;
@@ -197,36 +218,42 @@ to {
   border-style: solid;
   margin-right: 5vh;
 }
-#container-dadosPerfil{
+
+#container-dadosPerfil {
   grid-row: 1;
   grid-column: 2/3;
   margin-left: 5vh;
 }
+
 #container-perfil p {
   color: #ffffff;
   text-decoration: underline;
 }
-#imagemPerfil{
+
+#imagemPerfil {
   grid-row: 1 / 2;
   grid-column: 1 / 3;
   border-radius: 100%;
   width: 30vh;
   height: 30vh;
   margin: 20px;
-  background-color:#ffffff;
+  background-color: #ffffff;
   border-style: solid;
-  border-color:#051428;
+  border-color: #051428;
   border-width: 1vh;
 }
-#container-perfil span>h2{
-  color:white;
+
+#container-perfil span>h2 {
+  color: white;
   text-decoration: underline;
 }
-#container-perfil span>label{
-  color:white;
+
+#container-perfil span>label {
+  color: white;
   margin-left: 10px;
 }
-#container-perfil span>img{
+
+#container-perfil span>img {
   border-radius: 100%;
   width: 50px;
   height: 50px;
@@ -234,12 +261,13 @@ to {
 
 
 /* --------------------------------------------- Media Query --------------------------------------------------*/
-@media (max-width: 600px){
-  body{
-    display:flex;
+@media (max-width: 600px) {
+  body {
+    display: flex;
     flex-direction: column;
   }
-  #perfil{
+
+  #perfil {
     background-color: red;
   }
 }

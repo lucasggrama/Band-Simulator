@@ -55,7 +55,7 @@ let opçõesPerfil = [
 ]
 let perfisDeUsuario = [
     {
-        imagem:'',
+        imagem: '',
         nome: ''
     },
 
@@ -90,32 +90,32 @@ audio.src = bandas[i].audio;
 audio.play();
 
 // ------------------------------------- botoes ---------------------------------------------------------
-$('#sobre').css({display: "none"});
-$('#container-perfil').css({display: "none"});
-$('#placar').css({display: "none"});
-$('#newPerfil').css({display: "none"});
+$('#sobre').css({ display: "none" });
+$('#container-perfil').css({ display: "none" });
+$('#placar').css({ display: "none" });
+$('#newPerfil').css({ display: "none" });
 
-function aparecerDiv(e){
-    if(e.currentTarget.innerHTML == "Sobre"){
-        if(sobreEl.style.display == "none")
+function aparecerDiv(e) {
+    if (e.currentTarget.innerHTML == "Sobre") {
+        if (sobreEl.style.display == "none")
             sobreEl.style.display = "block";
         else
-        sobreEl.style.display = "none";
+            sobreEl.style.display = "none";
     }
-    else if(e.currentTarget.innerHTML == "Placar"){
-        if(placarEl.style.display == "none")
+    else if (e.currentTarget.innerHTML == "Placar") {
+        if (placarEl.style.display == "none")
             placarEl.style.display = "block";
         else
             placarEl.style.display = "none";
     }
-    else if(e.currentTarget.classList == "botaoPequeno"){
-        if(perfilNovoEl.style.display == "none")
+    else if (e.currentTarget.classList == "botaoPequeno") {
+        if (perfilNovoEl.style.display == "none")
             perfilNovoEl.style.display = "block";
         else
             perfilNovoEl.style.display = "none";
     }
-    else if(e.currentTarget.innerHTML != "Jogar"){
-        if(perfilEL.style.display == "none")
+    else if (e.currentTarget.innerHTML != "Jogar") {
+        if (perfilEL.style.display == "none")
             perfilEL.style.display = "grid";
         else
             perfilEL.style.display = "none";
@@ -128,7 +128,7 @@ let placarEl = document.querySelector('#placar');
 let perfilEL = document.querySelector('#container-perfil');
 let perfilNovoEl = document.querySelector('#newPerfil');
 
-for(botoes of botaoDiv){
+for (botoes of botaoDiv) {
     botoes.addEventListener('click', aparecerDiv);
 }
 
@@ -141,35 +141,35 @@ botaoNewPerfil.addEventListener('click', aparecerDiv);
 // fim botoes
 // ------------------------------------- Imagens ---------------------------------------------------------
 
-function alteraImagemPerfil(){
+function alteraImagemPerfil() {
     imagemPerfil.src = bandas[i].imagem;
 }
 
 let imagemPerfil = document.querySelector('#imagemPerfil');
 imagemPerfil.addEventListener('click', alteraImagemPerfil);
 
-function imagemPadrao(imagemVetor, string){
-    for(imagem of imagemVetor){
+function imagemPadrao(imagemVetor, string) {
+    for (imagem of imagemVetor) {
         imagem.src = string;
     }
 }
 
 let imagens = document.querySelectorAll('.imagemDoPerfil');
-imagemPadrao(imagens,'imgs/pngegg.png');
+imagemPadrao(imagens, 'imgs/pngegg.png');
 
 // ------------------------------------- criar Perfil ---------------------------------------------------------
-function criaPerfil(){
+function criaPerfil() {
     seuNome.innerHTML = inputNome.value;
-    if(j == 0){
-        imagemPadrao(imagens, opçõesPerfil[opçõesPerfil.length-1].imagem);
+    if (j == 0) {
+        imagemPadrao(imagens, opçõesPerfil[opçõesPerfil.length - 1].imagem);
     }
-    else{
-        imagemPadrao(imagens, opçõesPerfil[j-1].imagem);
+    else {
+        imagemPadrao(imagens, opçõesPerfil[j - 1].imagem);
     }
 }
-function switchImage(){
+function switchImage() {
     imagemPreviewEl.src = opçõesPerfil[j].imagem;
-    if(j == opçõesPerfil.length-1)
+    if (j == opçõesPerfil.length - 1)
         j = 0;
     else
         j++;

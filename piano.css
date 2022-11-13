@@ -1,10 +1,10 @@
 body {
   margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    height: 100vh;
-    align-items: center;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
 }
 
 .piano {
@@ -28,11 +28,11 @@ body {
 
 .preta {
   width: 38px;
-    height: 160px;
-    border-radius: 0 0 5px 5px;
-    box-sizing: border-box;
-    position: absolute;
-    background-color: #000;
+  height: 160px;
+  border-radius: 0 0 5px 5px;
+  box-sizing: border-box;
+  position: absolute;
+  background-color: #000;
 }
 
 .branca {
@@ -43,13 +43,16 @@ body {
   border: solid #000 2px;
   box-sizing: border-box;
 }
+
 .tocando {
   background-color: blue;
 }
+
 #invisible {
   display: none;
   background-color: black;
 }
+
 .preta:nth-child(1) {
   left: 48px;
 }
