@@ -46,6 +46,10 @@ body {
 .tocando {
   background-color: blue;
 }
+#invisible {
+  display: none;
+  background-color: black;
+}
 .preta:nth-child(1) {
   left: 48px;
 }
