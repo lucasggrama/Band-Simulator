@@ -204,12 +204,12 @@ $('#confirma-perfil').click(criaPerfil);
 $('#switcher-imagem').click(switchImage)
 // fim criar perfil
 // selecionar Perfil
-function selecionado(e){
+function selecionado(e) {
     e.currentTarget.classList.add('perfilSelecionado');
     alert('cu');
 }
 let perfisSalvos = document.querySelectorAll('perfilAdd');
-for(perfil of perfisSalvos){
-    perfil.addEventListener('click',selecionado);
+for (perfil of perfisSalvos) {
+    perfil.addEventListener('click', selecionado);
 }
 // DEPOIS TENTAR CRIAR UM OBJETO COM AS INFORMAÇÕES DO PERFIL;
