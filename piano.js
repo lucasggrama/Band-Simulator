@@ -61,7 +61,7 @@ function doremi(limite) {
         tocar(x[i]);
     }*/
     let tocaDoremi = setInterval(() => {
-        if (i == limite) {
+        if (i === limite) {
             clearInterval(tocaDoremi);
         }
 
