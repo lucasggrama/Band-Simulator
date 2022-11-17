@@ -25,6 +25,7 @@ function pausecomp(millis) {
 let musica = [18, 19, 20, 21, 25, 21, 21, 25, 18, 19, 18, 19, 25, 19, 19, 25, 18, 22, 21, 20, 25, 20, 20, 25, 18, 19, 20, 21, 25, 21, 21, -1];
 
 function intervaloJogador(limite) {
+    
     teclaPiano.forEach((tecla, i) => {
         const number = i < 9 ? '0' + (i + 1) : (i + 1);
         let x=0;
@@ -53,7 +54,9 @@ function jogar() {
 
 function doremi(limite) {
     // let x = [17, 17, 18, 19, 19, 18, 17, 16, 15, 15, 16, 17, 17, 16, 16, 25, 17, 17, 18, 19, 19, 18, 17, 16, 15, 15, 16];
-
+    
+    if(limite == undefined)
+        limite = 30;
     let i = 0;
     /*for(let i = 0; i < 3; i++)
     {
