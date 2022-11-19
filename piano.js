@@ -1,7 +1,18 @@
+// menu jogo
+let pia = document.querySelector(".piano")
+pia.classList.add("none");
+let menu = document.querySelector('#menu');
+let botaoJogar = document.querySelector('#botao');
 const teclaPiano = document.querySelectorAll('.tecla');
 let time = 0;
-
-function tocar(id) {
+let strUsuario = [];
+botaoJogar.addEventListener('click', () => {
+    menu.classList.add("none");
+    pia.classList.remove("none");
+})
+function tocar(id, clique) {
+    if(clique == 1)
+        strUsuario.push(id);
     let tocada = document.getElementById(id);
     let url = 'piano/' + id + '.mp3'
     tocada.classList.add("tocando");
@@ -10,18 +21,9 @@ function tocar(id) {
         tocada.classList.remove("tocando");
     }, 500);
 }
-
-function teste(number) {
-    alert(number);
-}
-
 function pausecomp(millis) {
-    var date = new Date();
-    var curDate = null;
-    do { curDate = new Date(); }
-    while (curDate - date < millis);
+    setInterval(() => {;}, millis);
 }
-
 let musica = [18, 19, 20, 21, 25, 21, 21, 25, 18, 19, 18, 19, 25, 19, 19, 25, 18, 22, 21, 20, 25, 20, 20, 25, 18, 19, 20, 21, 25, 21, 21, -1];
 
 function intervaloJogador(limite) {
@@ -41,28 +43,10 @@ function intervaloJogador(limite) {
     
     })
 }
-function jogar() {
-
-    for (let x = 2; x <= musica.length ; x += 2) {
-        doremi(x);
-        let intervalo = setInterval(() => {
-            intervaloJogador(x);
-        }
-            , x * 10500)
-    }
-}
-
 function doremi(limite) {
-    // let x = [17, 17, 18, 19, 19, 18, 17, 16, 15, 15, 16, 17, 17, 16, 16, 25, 17, 17, 18, 19, 19, 18, 17, 16, 15, 15, 16];
-    
     if(limite == undefined)
         limite = 30;
     let i = 0;
-    /*for(let i = 0; i < 3; i++)
-    {
-        pausecomp(500);
-        tocar(x[i]);
-    }*/
     let tocaDoremi = setInterval(() => {
         if (i === limite) {
             clearInterval(tocaDoremi);
@@ -77,11 +61,27 @@ function doremi(limite) {
         ++i;
     }, 700)
 }
-
-
-
-teclaPiano.forEach((tecla, i) => {
+function estahcerto(musica, jogador)
+{
+    let pos = jogador.length() - 1;
+    return musica[pos] == jogador[pos];
+}
+function jogar() {
+    let i = 1;
+    while(i <= 30)
+    {
+        doremi(i);
+        pausecomp(i * 700); 
+        i += 2;
+    }
+}
+function tocarTecla(tecla, i) {
     const number = i < 9 ? '0' + (i + 1) : (i + 1);
     tecla.addEventListener('click', () => tocar(number));
+    return number;
+}
+teclaPiano.forEach((tecla, i) => {
+    const number = i < 9 ? '0' + (i + 1) : (i + 1);
+    tecla.addEventListener('click', () => tocar(number, 1));
 
 })

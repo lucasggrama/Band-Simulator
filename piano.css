@@ -6,7 +6,6 @@ body {
   height: 100vh;
   align-items: center;
 }
-
 .piano {
   height: 290px;
   padding: 90px 30px 0 30px;
@@ -15,8 +14,29 @@ body {
   border-radius: 10px;
 }
 
-
-
+/* Menu */
+#menu {
+  background-color: #ffb86c;
+  padding: 0.7em;
+  border-radius: 0.4em;
+}
+#menu h2 {
+  font-family: 'Righteous', cursive;
+  color: #f8f8f2;
+}
+#menu p {
+  border-color: #f8f8f2;
+  border-radius: 0.5em;
+  border-style: solid;
+  color: #f8f8f2;
+}
+#menu p:hover {
+  border-color: #f1fa8c;
+  
+}
+.none {
+  display: none;
+}
 .pretas {
   position: relative;
   display: flex;
