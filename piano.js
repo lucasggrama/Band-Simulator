@@ -27,11 +27,14 @@ function tocar(id, clique) {
     setTimeout(() => {
         tocada.classList.remove("tocando");
     }, 500);
+    let tam = strUsuario.length - 1;
+    if(strUsuario[tam] != musica[tam])
+        erro();
 }
 function pausecomp(millis) {
     setInterval(() => {;}, millis);
 }
-let musica = [18, 19, 20, 21, 25, 21, 21, 25, 18, 19, 18, 19, 25, 19, 19, 25, 18, 22, 21, 20, 25, 20, 20, 25, 18, 19, 20, 21, 25, 21, 21, -1];
+let musica = [18, 19, 20, 21, 21, 21, 18, 19, 18, 19, 19, 19, 18, 22, 21, 20, 20, 20, 18, 19, 20, 21, 21, 21, -1];
 
 function intervaloJogador(limite) {
     
@@ -70,17 +73,32 @@ function doremi(limite) {
 }
 function estahcerto(musica, jogador)
 {
-    let pos = jogador.length() - 1;
-    return musica[pos] == jogador[pos];
+    for(let i = 0; i < jogador.length; i += 2)
+        if(musica[i] != jogador[i])
+        {
+            return false;
+        }
+    
 }
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+let a =0;
+
+/*function usuarioDigitar(){
+    //for (; i<blah)
+
+
+
+    //habilito para digitar 
+    if(i<blah)
+    for(let j = 0; j < strUsuario.length)
+    setTimeout(jogar, i * 1000);
+
+
+}*/
 function jogar() {
-    let i = 1;
-    while(i <= 30)
-    {
-        doremi(i);
-        pausecomp(i * 700); 
-        i += 2;
-    }
+    doremi(30);
 }
 function tocarTecla(tecla, i) {
     const number = i < 9 ? '0' + (i + 1) : (i + 1);
