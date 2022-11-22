@@ -10,6 +10,13 @@ botaoJogar.addEventListener('click', () => {
     menu.classList.add("none");
     pia.classList.remove("none");
 })
+function erro() {
+    strUsuario = [];
+    menu.classList.remove("none");
+    pia.classList.add("none");
+    alert("Você perdeu");
+}
+
 function tocar(id, clique) {
     if(clique == 1)
         strUsuario.push(id);
