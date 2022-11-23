@@ -96,7 +96,7 @@ $('#placar').css({ display: "none" });
 $('#newPerfil').css({ display: "none" });
 
 function aparecerDiv(e) {
-    if (e.currentTarget.innerHTML == "Sobre") {
+    if (e.currentTarget.innerHTML == "Sobre" || e.currentTarget.innerHTML == 'X'){
         if (sobreEl.style.display == "none")
             sobreEl.style.display = "block";
         else
@@ -108,7 +108,7 @@ function aparecerDiv(e) {
         else
             placarEl.style.display = "none";
     }
-    else if (e.currentTarget.classList == "botaoPequeno") {
+    else if (e.currentTarget == corrigirBotao) {
         if (perfilNovoEl.style.display == "none")
             perfilNovoEl.style.display = "block";
         else
@@ -122,6 +122,7 @@ function aparecerDiv(e) {
     }
 }
 
+let corrigirBotao = document.querySelector('#novoPerfil');
 let botaoDiv = document.querySelectorAll('.botoesDiv');
 let sobreEl = document.querySelector('#sobre');
 let placarEl = document.querySelector('#placar');

@@ -207,10 +207,12 @@ body {
   grid-row: 2/3;
   grid-column: 2;
   margin-left: 10vh;
+  grid-template-rows: 10% 30% 60%;
+  grid-template-columns: ;
 }
+/* 41 37*/
 
 .containers-footer-perfil {
-  /*trocar para uma classe no futuro */
   grid-row: 2/3;
   grid-column: 1;
   margin-top: 5vh;
@@ -293,7 +295,7 @@ body {
 }
 
 .perfilSelecionado {
-  border-color: #ffffff;
+  border-color: yellow;
 }
 
 .perfilAdd {
@@ -304,8 +306,8 @@ body {
   border-radius: 5%;
   margin: 5px 10px 5px;
   padding: 3px;
-  border: 1px none solid;
-  border-radius: 5%;
+  border: 1px white solid;
+  border-radius: 6%;
   box-sizing: border-box;
 }
 
