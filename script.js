@@ -96,13 +96,13 @@ $('#placar').css({ display: "none" });
 $('#newPerfil').css({ display: "none" });
 
 function aparecerDiv(e) {
-    if (e.currentTarget.innerHTML == "Sobre" || e.currentTarget.innerHTML == 'X'){
+    if (e.currentTarget.innerHTML == "Sobre" || e.currentTarget == fecharSobre){
         if (sobreEl.style.display == "none")
             sobreEl.style.display = "block";
         else
             sobreEl.style.display = "none";
     }
-    else if (e.currentTarget.innerHTML == "Placar") {
+    else if (e.currentTarget.innerHTML == "Placar" || e.currentTarget == fecharPlacar) {
         if (placarEl.style.display == "none")
             placarEl.style.display = "block";
         else
@@ -121,6 +121,9 @@ function aparecerDiv(e) {
             perfilEL.style.display = "none";
     }
 }
+
+let fecharPlacar = document.querySelector('#botaoPlacarX');
+let fecharSobre = document.querySelector('#botaoSobreX');
 
 let corrigirBotao = document.querySelector('#novoPerfil');
 let botaoDiv = document.querySelectorAll('.botoesDiv');
@@ -206,11 +209,12 @@ $('#switcher-imagem').click(switchImage)
 // fim criar perfil
 // selecionar Perfil
 function selecionado(e) {
+    alert('cu');
     e.currentTarget.classList.add('perfilSelecionado');
     alert('cu');
 }
-let perfisSalvos = document.querySelectorAll('perfilAdd');
-for (perfil of perfisSalvos) {
-    perfil.addEventListener('click', selecionado);
+let perfisSalvos = document.querySelectorAll('.perfilAdd');
+for(selecao of perfisSalvos) {
+    selecao.addEventListener('click', selecionado);
 }
 // DEPOIS TENTAR CRIAR UM OBJETO COM AS INFORMAÇÕES DO PERFIL;
