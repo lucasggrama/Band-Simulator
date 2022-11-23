@@ -1,5 +1,6 @@
 // menu jogo
 let pia = document.querySelector(".piano")
+let voltar = document.querySelector('#retornaMenu');
 pia.classList.add("none");
 let menu = document.querySelector('#menu');
 let botaoJogar = document.querySelector('#botao');
@@ -9,7 +10,14 @@ let strUsuario = [];
 botaoJogar.addEventListener('click', () => {
     menu.classList.add("none");
     pia.classList.remove("none");
+    voltar.style.display = 'block';
 })
+voltar.addEventListener('click', () =>{
+    menu.classList.remove("none");
+    pia.classList.add("none");
+    voltar.style.display = 'none';
+})
+
 function erro() {
     strUsuario = [];
     menu.classList.remove("none");
