@@ -253,7 +253,9 @@ body {
 
 #container-perfil li {
   list-style: circle;
-  color: white;
+  color: #ff9000;
+  font-family: 'Mulish', sans-serif;
+  font-size: 2vh;
 }
 
 #imagemPerfil {

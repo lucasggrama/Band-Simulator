@@ -63,6 +63,7 @@ let perfisDeUsuario = [
 let perfilSelecao = [];
 let perfilInicial = document.querySelector('#inicial');
 perfilSelecao.push(perfilInicial);
+perfilInicial.addEventListener('click', selecionarPerfil);
 
 let volumeEl = document.querySelector("#reproducao-musica");
 volumeEl.volume = 0.2;
