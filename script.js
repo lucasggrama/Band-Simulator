@@ -55,11 +55,15 @@ let opçõesPerfil = [
 ]
 let perfisDeUsuario = [
     {
-        imagem: '',
-        nome: ''
-    },
+        nome: 'Anônimo',
+        imagem: './imgs/pngegg.png',
+        pontuacao: 0
+    }
+];
+let perfilSelecao = [];
+let perfilInicial = document.querySelector('#inicial');
+perfilSelecao.push(perfilInicial);
 
-]
 let volumeEl = document.querySelector("#reproducao-musica");
 volumeEl.volume = 0.2;
 
@@ -161,24 +165,41 @@ function imagemPadrao(imagemVetor, string) {
 let imagens = document.querySelectorAll('.imagemDoPerfil');
 imagemPadrao(imagens, 'imgs/pngegg.png');
 
+// ------------------------------------- selecionar Perfil ----------------------------------------------------
+function atualiza(e){
+    imagemPadrao(imagens,perfisDeUsuario[e].imagem);
+    seuNome.innerHTML = perfisDeUsuario[e].nome;
+    pontuacaoEl.innerHTML = 'Sua pontuação: ' + perfisDeUsuario[e].pontuacao;
+}
+let perfilAtual = 0;
+
+function selecionarPerfil(e){
+    for(al of perfilSelecao)
+        al.classList.remove('perfilSelecionado');
+    let perfilSelecionado = e.currentTarget;
+    perfilSelecionado.classList.add('perfilSelecionado');
+    for(let i = 0; i < perfilSelecao.length; i++){
+        if(perfilSelecao[i] == perfilSelecionado){
+            perfilAtual = i;
+            atualiza(perfilAtual);
+        }
+    }
+}
+// DEPOIS TENTAR CRIAR UM OBJETO COM AS INFORMAÇÕES DO PERFIL;
 // ------------------------------------- criar Perfil ---------------------------------------------------------
 function criaPerfil() {
-    seuNome.innerHTML = inputNome.value;
     let imgAdd;
-    if (j == 0) {
-        imagemPadrao(imagens, opçõesPerfil[opçõesPerfil.length - 1].imagem);
+    if (j == 0)
         imgAdd = opçõesPerfil[opçõesPerfil.length - 1].imagem;
-    }
-    else {
-        imagemPadrao(imagens, opçõesPerfil[j - 1].imagem);
+    else
         imgAdd = opçõesPerfil[j - 1].imagem;
-    }
 
     // Container do novo Perfil
     let containerPerfis = document.querySelector('#container-perfils-salvos')
     let novoPerfil = document.createElement('div');
     containerPerfis.appendChild(novoPerfil);
     novoPerfil.classList.add('perfilAdd');
+    novoPerfil.addEventListener('click', selecionarPerfil);
 
     // imagem do novo Perfil
     let novaImagem = document.createElement('img');
@@ -192,6 +213,14 @@ function criaPerfil() {
     novoPerfil.appendChild(novoNome);
     novoNome.classList.add('textoPerfilAdd');
 
+    let novo_perfil = {
+        nome: inputNome.value,
+        imagem: imgAdd,
+        pontuacao: 0,
+    };
+    perfisDeUsuario.push(novo_perfil);
+    perfilSelecao.push(novoPerfil);
+
 }
 function switchImage() {
     imagemPreviewEl.src = opçõesPerfil[j].imagem;
@@ -201,20 +230,11 @@ function switchImage() {
         j++;
 }
 let j = 0;
+let pontuacaoEl = document.querySelector('#pontuação-perfil')
 let inputNome = document.querySelector('#nomePerfil');
 let seuNome = document.querySelector('#nomeAlteravel');
-let imagemPreviewEl = document.querySelector('#previewPerfil')
+let imagemPreviewEl = document.querySelector('#previewPerfil');
 $('#confirma-perfil').click(criaPerfil);
-$('#switcher-imagem').click(switchImage)
+$('#switcher-imagem').click(switchImage);
+
 // fim criar perfil
-// selecionar Perfil
-function selecionado(e) {
-    alert('cu');
-    e.currentTarget.classList.add('perfilSelecionado');
-    alert('cu');
-}
-let perfisSalvos = document.querySelectorAll('.perfilAdd');
-for(selecao of perfisSalvos) {
-    selecao.addEventListener('click', selecionado);
-}
-// DEPOIS TENTAR CRIAR UM OBJETO COM AS INFORMAÇÕES DO PERFIL;

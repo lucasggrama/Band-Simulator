@@ -11,6 +11,7 @@ let idmus = 0;
 let doremifa = [18, 19, 20, 21, 25, 21, 21, 25, 18, 19, 18, 19, 25, 19, 19, 25, 18, 22, 21, 20,  25, 20, 20, 18, 19, 20, 21, 25, 21, 21];
 let nonap1 = [17, 17, 18, 19, 19, 18, 17, 16, 15, 15, 16, 17,17, 25, 16, 16];
 let nonap2 = [17, 17, 18, 19,19, 18, 17, 16, 15, 15, 16];
+localStorage.setItem('placar', 0);
 // variavel para parar a musica caso perca
 let musica = [], music = [];
 let tituloMusica = document.querySelector('#botao1')
@@ -44,6 +45,7 @@ botaoJogar.addEventListener('click', () => {
     play(musica.length - 1);
 })
 voltar.addEventListener('click', () =>{
+    err = 0;
     menu.classList.remove("none");
     pia.classList.add("none");
     voltar.style.display = 'none';

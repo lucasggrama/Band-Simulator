@@ -294,7 +294,7 @@ body {
 }
 
 .perfilSelecionado {
-  border-color: yellow;
+  border-color: yellow !important;
 }
 
 .perfilAdd {
@@ -312,6 +312,10 @@ body {
 
 .textoPerfilAdd {
   margin: 3px;
+  margin-left: 10px;
+  font-family: 'Mulish', sans-serif;
+  font-size: 2vh;
+  color: #ff9000;
 }
 
 
