@@ -8,7 +8,6 @@ const teclaPiano = document.querySelectorAll('.tecla');
 let time = 0;
 let strUsuario = [];
 // variavel para parar a musica caso perca
-let perdeu = false;
 
 botaoJogar.addEventListener('click', () => {
     menu.classList.add("none");
@@ -22,16 +21,14 @@ voltar.addEventListener('click', () =>{
 })
 
 function erro() {
-    perdeu = true;
     strUsuario = [];
     menu.classList.remove("none");
     pia.classList.add("none");
+    voltar.style.display = 'none';
     alert("Você perdeu");
 }
 
 function tocar(id, clique) {
-    if (perdeu == true)
-        return;
     if(clique == 1)
         strUsuario.push(id);
     let tocada = document.getElementById(id);
