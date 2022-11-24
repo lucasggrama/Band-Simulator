@@ -7,7 +7,7 @@ let botaoJogar = document.querySelector('#botao');
 const teclaPiano = document.querySelectorAll('.tecla');
 let time = 0;
 let strUsuario = [];
-let idmus = 1;
+let idmus = 0;
 let doremifa = [18, 19, 20, 21, 25, 21, 21, 25, 18, 19, 18, 19, 25, 19, 19, 25, 18, 22, 21, 20,  25, 20, 20, 18, 19, 20, 21, 25, 21, 21];
 let nonap1 = [17, 17, 18, 19, 19, 18, 17, 16, 15, 15, 16, 17,17, 25, 16, 16];
 let nonap2 = [17, 17, 18, 19,19, 18, 17, 16, 15, 15, 16];
@@ -65,7 +65,7 @@ function fim() {
     alert("Você venceu!");
     err = 0;
 }
-let err = 0;
+let err = 1;
 let tam;
 function tocar(id, clique) {
     if(clique == 1)
@@ -112,10 +112,10 @@ function play(limite) {
         limite = 23;
     let i = 0;
     let tocaDoremi = setInterval(() => {
-        if (i === limite) {
+        if (i === limite || err == 0) {
+            err = 1;
             clearInterval(tocaDoremi);
         }
-
         let tocada = document.getElementById(musica[i]);
         if (musica[i] == 25)
             ;
