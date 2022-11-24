@@ -170,7 +170,8 @@ imagemPadrao(imagens, 'imgs/pngegg.png');
 function atualiza(e){
     imagemPadrao(imagens,perfisDeUsuario[e].imagem);
     seuNome.innerHTML = perfisDeUsuario[e].nome;
-    pontuacaoEl.innerHTML = 'Sua pontuação: ' + perfisDeUsuario[e].pontuacao;
+    localStorage.setItem('placar', perfisDeUsuario[e].pontuacao);
+    pontuacaoEl.innerHTML = 'Sua pontuação: ' + localStorage.getItem('placar');
 }
 let perfilAtual = 0;
 
@@ -186,7 +187,6 @@ function selecionarPerfil(e){
         }
     }
 }
-// DEPOIS TENTAR CRIAR UM OBJETO COM AS INFORMAÇÕES DO PERFIL;
 // ------------------------------------- criar Perfil ---------------------------------------------------------
 function criaPerfil() {
     let imgAdd;
