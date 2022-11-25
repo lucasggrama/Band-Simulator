@@ -13,7 +13,7 @@ let nonap1 = [17, 17, 18, 19, 19, 18, 17, 16, 15, 15, 16, 17,17, 25, 16, 16, 17,
 let jinglebell = [17, 17, 17, 25, 17, 17, 17, 25, 17, 19, 15, 16, 17, 25, 25, 25, 18, 18, 18, 25, 17, 17, 17, 25, 16, 17, 16, 17, 16, 25, 19, 17, 17, 17, 25, 17, 17, 17, 25, 17, 19, 15, 16, 25, 18, 18, 18, 25, 18, 17, 17, 25, 18, 17, 15, 14];
 let asabranca = [15, 16, 17, 25, 19, 25, 19, 25, 17, 25, 18, 25, 25, 25, 18, 15, 16, 17,  19, 25, 19, 25, 18, 17, 17, 25, 15, 15, 16, 17, 19, 25, 19,  18, 17, 15, 18, 25, 25, 25, 17, 17, 16, 16, 25];
 placar = parseInt(localStorage.getItem('placar'));
-
+let dificuldade = document.querySelector('#dificuldade');
 // variavel para parar a musica caso perca
 let musica = [], music = [];
 let tituloMusica = document.querySelector('#botao1')
@@ -28,22 +28,25 @@ function idchange(idm){
     {
         musica = doremifa;
         tituloMusica.innerHTML = "Do re mi fa"
-
+        dificuldade.innerHTML = "Dificuldade: Fácil"
     }
     else if(idm == 1)
     {
         musica = jinglebell;
         tituloMusica.innerHTML = "Bate o Sino (Jingle Bells)";
+        dificuldade.innerHTML = "Dificuldade: Fácil"
     }
-    else if(idm == 2)
-    {
-        musica = asabranca;
-        tituloMusica.innerHTML = "Asa Branca"
-    }
-    else 
+    else if (idm == 2)
     {
         musica = nonap1;
         tituloMusica.innerHTML = "9º Sinfonia de Bethoven";
+        dificuldade.innerHTML = "Dificuldade: Médio";
+    }
+    else
+    {
+        musica = asabranca;
+        tituloMusica.innerHTML = "Asa Branca"
+        dificuldade.innerHTML = "Dificuldade: Difícil"
     }
 }
 
