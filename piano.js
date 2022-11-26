@@ -67,18 +67,14 @@ voltar.addEventListener('click', () =>{
 })
 
 function erro() {
-    alert("Você perdeu");
     window.location.reload(true);
+    alert("Você perdeu!");
 }
 function fim() {
-    strUsuario = [];
-    menu.classList.remove("none");
-    pia.classList.add("none");
-    voltar.style.display = 'none';
-    alert("Você venceu!");
-    err = 0;
-    placar = placar + 100;
+    alert("Você venceu!")
+    placar += 100;
     localStorage.setItem('placar', placar);
+    window.location.reload(true);
 }
 let err = 1;
 let tam;
@@ -96,9 +92,9 @@ function tocar(id, clique) {
     {
         tam = strUsuario.length - 1;
         if(strUsuario[tam] != music[tam])
-            erro();
+            setTimeout(erro, 500);
         if(strUsuario.length == music.length)
-            fim();
+            setTimeout(fim, 500)
     }
 }
 function pausecomp(millis) {
