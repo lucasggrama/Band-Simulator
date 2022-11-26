@@ -258,6 +258,7 @@ bodyEl.addEventListener('keydown', (e) => {
                                 bodyEl.style.backgroundImage = 'url(./imgs/manoelgomes.png)';
                                 musica.innerHTML = "Olha se você não me ama - Manoel Gomes";
                                 musicaLink.href = "https://www.youtube.com/watch?v=GyRmVkAGrKo&ab_channel=LeandroMota";
+                                opçõesPerfil.push({'imagem': './imgs/manoel-gomes-logo.png'});
                                 iconEl.href = "./imgs/manoel-gomes-logo.png";
                                 audio.src = "./audio/manoel-gomes.mp3";
                                 audio.play();
