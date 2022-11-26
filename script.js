@@ -233,6 +233,7 @@ function switchImage() {
     else
         j++;
 }
+
 let j = 0;
 let pontuacaoEl = document.querySelector('#pontuação-perfil')
 let inputNome = document.querySelector('#nomePerfil');

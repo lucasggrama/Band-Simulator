@@ -133,3 +133,26 @@ body {
   left: 865px;
 
 }
+
+#fim-de-jogo{
+  display: none;
+}
+
+.ganhou, .perdeu{
+  width: 400px;
+  height: 400px;
+  background-color: #7c2a1c;
+}
+
+.ganhou h1, .perdeu h1 {
+  font-size: 4em;
+  color: #fff;
+  font-family: 'Oswald', sans-serif;
+}
+
+.ganhou a, .perdeu a{
+  font-size: 15px;
+  color: red;
+  font-family: 'Mulish', sans-serif;
+  text-decoration: none;
+}
