@@ -82,8 +82,11 @@ geraNovamente();
 
 localStorage.setItem('imagemAleatoria', i);
 let imagemBackground = document.querySelector('#bodyInicial');
+
 let musicaLink = document.querySelector('#musica')
+
 imagemBackground.style.backgroundImage = `url(${bandas[i].imagem})`;
+
 musicaLink.href = bandas[i].link;
 
 //   ------------------------------------- audio ---------------------------------------------------------
@@ -239,3 +242,26 @@ $('#confirma-perfil').click(criaPerfil);
 $('#switcher-imagem').click(switchImage);
 
 // fim criar perfil
+
+/********************************************** Easter Egg *******************************/
+let bodyEl = document.querySelector('body');
+
+bodyEl.addEventListener('keydown', (e) => {
+    if(e.keyCode === 37)
+        bodyEl.addEventListener('keydown', (e) => {
+            if(e.keyCode === 38)
+                bodyEl.addEventListener('keydown', (e) => {
+                    if(e.keyCode === 39)
+                        bodyEl.addEventListener('keydown', (e) => {
+                            if(e.keyCode === 40){
+                                bodyEl.style.backgroundImage = 'url(./imgs/manoelgomes.png)';
+                                musica.innerHTML = "SE VOCÊ NÃO ME AMA- MANOEL GOMES";
+                                musicaLink.href = "https://www.youtube.com/watch?v=GyRmVkAGrKo&ab_channel=LeandroMota";
+                                audio.src = "./audio/manoel-gomes.mp3";
+                                audio.play();
+                            }
+                        })
+                })
+        })
+})
+
