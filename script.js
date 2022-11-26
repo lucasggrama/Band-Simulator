@@ -245,6 +245,7 @@ $('#switcher-imagem').click(switchImage);
 
 /********************************************** Easter Egg *******************************/
 let bodyEl = document.querySelector('body');
+let iconEl = document.querySelector("link[rel*='icon']");
 
 bodyEl.addEventListener('keydown', (e) => {
     if(e.keyCode === 37)
@@ -255,8 +256,9 @@ bodyEl.addEventListener('keydown', (e) => {
                         bodyEl.addEventListener('keydown', (e) => {
                             if(e.keyCode === 40){
                                 bodyEl.style.backgroundImage = 'url(./imgs/manoelgomes.png)';
-                                musica.innerHTML = "SE VOCÊ NÃO ME AMA- MANOEL GOMES";
+                                musica.innerHTML = "Olha se você não me ama - Manoel Gomes";
                                 musicaLink.href = "https://www.youtube.com/watch?v=GyRmVkAGrKo&ab_channel=LeandroMota";
+                                iconEl.href = "./imgs/manoel-gomes-logo.png";
                                 audio.src = "./audio/manoel-gomes.mp3";
                                 audio.play();
                             }

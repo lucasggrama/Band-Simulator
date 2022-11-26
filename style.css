@@ -153,9 +153,9 @@ body {
 #fechar {
   position: relative;
   color: red;
-  font-size: 20px;
+  font-size: 10px;
   float: right;
-  top: 3%;
+  top: 1vh;
 }
 
 #sobre p {
@@ -169,7 +169,6 @@ body {
   font-family: 'Oswald', sans-serif;
   font-size: 4vh;
   color: #ffffff;
-  padding-top: 2%;
 }
 
 /* --------------------------------------------- Perfil --------------------------------------------------*/
