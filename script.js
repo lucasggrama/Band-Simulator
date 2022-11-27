@@ -250,7 +250,7 @@ let imagemPreviewEl = document.querySelector('#previewPerfil');
 $('#confirma-perfil').click(criaPerfil);
 $('#switcher-imagem').click(switchImage);
 
-// fim criar perfil
+// ---------------------------------------- deletar Perfil -------------------------------------
 
 /********************************************** Easter Egg *******************************/
 let bodyEl = document.querySelector('body');
@@ -276,4 +276,22 @@ bodyEl.addEventListener('keydown', (e) => {
                 })
         })
 })
+// ------------------------------------------ webstorage Perfil ----------------------------------------------------
 
+function removePerfil(){
+    if(perfilAtual == 0){
+        alert('não é possivel remover o perfil anonimo')
+    }
+    else{
+        imagemPadrao(imagens,perfisDeUsuario[perfilAtual-1].imagem);
+        seuNome.innerHTML = perfisDeUsuario[perfilAtual-1].nome;
+    
+        perfisDeUsuario.splice(perfilAtual, 1);
+        perfilSelecao[perfilAtual].remove();
+        perfilSelecao.splice(perfilSelecao[perfilAtual], 1);
+        
+        perfilAtual--;
+    }
+
+}
+$('#remover').click(removePerfil);

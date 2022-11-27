@@ -165,7 +165,10 @@ body {
 #como{
   display:none;
 }
-#como li, #sobre p {
+#como li{
+  list-style-type: decimal;
+}
+#como li,#sobre p {
   font-family: 'Mulish', sans-serif;
   font-size: 2vh;
   color: #ff9000;
