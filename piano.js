@@ -14,9 +14,9 @@ let link = document.querySelector('a');
 
 let doremifa = [18, 19, 20, 21, 25, 21, 21, 25, 18, 19, 18, 19, 25, 19, 19, 25, 18, 22, 21, 20, 25, 20, 20, 18, 19, 20, 21, 25, 21, 21];
 let nonap1 = [17, 17, 18, 19, 19, 18, 17, 16, 15, 15, 16, 17, 17, 25, 16, 16, 17, 17, 18, 19, 19, 18, 17, 16, 15, 15, 16, 17, 16, 25, 15, 15];
-let jinglebell = [17, 17, 17, 25, 17, 17, 17, 25, 17, 19, 15, 16, 17, 25, 25, 25, 18, 18, 18, 25, 17, 17, 17, 25, 16, 17, 16, 17, 16, 25, 19, 17, 17, 17, 25, 17, 17, 17, 25, 17, 19, 15, 16, 25, 18, 18, 18, 25, 18, 17, 17, 25, 18, 17, 15, 14];
-let asabranca = [15, 16, 17, 25, 19, 25, 19, 25, 17, 25, 18, 25, 25, 25, 18, 15, 16, 17, 19, 25, 19, 25, 18, 17, 17, 25, 15, 15, 16, 17, 19, 25, 19, 18, 17, 15, 18, 25, 25, 25, 17, 17, 16, 16, 25];
-let canetaazul = [16, 19, 19, "06", 25, 25, 16, 17, 17, 16, 25, 25, 16, 19, 19, "06"];
+let jinglebell = [17, 17, 17, 25, 17, 17, 17, 25, 17, 19, 15, 16, 17, 25, 25, 25, 18, 18, 18, 25, 17, 17, 17, 25, 16, 17, 16, 17, 16, 25, 19, 17, 17, 17, 25, 17, 17, 17, 25, 17, 19, 15, 16, 17, 25, 18, 18, 18, 25, 18, 17, 17, 25, 19, 19, 18, 16, 15];
+let asabranca = [15, 16, 17, 25, 19, 25, 19, 25, 17, 25, 18, 25, 25, 25, 18, 15, 16, 17, 19, 25, 19, 25, 18, 17, 17, 25, 15, 15, 16, 17, 19, 25, 19, 18, 17, 15, 18, 25, 25, 25, 17, 17, 16, 16, 25, 17, 25, 16, 16, 15, 15];
+let canetaazul = [16, 19, 19, "06", 25, 25, 16, 17, 17, 16, 25, 25, 16, 19, 19, "06", 25, 15, 16, 17, 16, 16, 25, "03"];
 let placar = parseInt(localStorage.getItem('placar'));
 let dificuldade = document.querySelector('#dificuldade');
 
@@ -48,7 +48,7 @@ function idchange(idm) {
         musica = doremifa;
         tituloMusica.innerHTML = "Do re mi fa"
         dificuldade.innerHTML = "Dificuldade: Fácil"
-        
+
         
     }
     else if(idm == 4)
@@ -96,6 +96,7 @@ voltar.addEventListener('click', () => {
     menu.classList.remove("none");
     pia.classList.add("none");
     voltar.style.display = 'none';
+    window.location.reload(true);  
 })
 
 let containerFimEl = document.querySelector("#fim-de-jogo");
