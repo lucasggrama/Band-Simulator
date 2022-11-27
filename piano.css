@@ -30,6 +30,7 @@ body {
 #menu p {
   border-color: #f8f8f2;
   border-radius: 0.5em;
+  padding: 0.2em;
   border-style: solid;
   color: #f8f8f2;
 }
@@ -37,6 +38,30 @@ body {
   border-color: #f1fa8c;
   
 }
+button{
+  display:block;
+ background: linear-gradient(to right,#ffb86c ,#ffb86c);
+ background-color: #ffb86c;
+ color: white;
+ font-family: Trebuchet MS;
+ font-size: 1em;
+ font-weight: 800;
+ font-style: normal;
+ text-decoration: none;
+ padding: 0.4em 0.4em;
+ border: 2px solid #ffffff;
+ border-radius: 100%;
+ display: inline-block;
+ margin: 0.4em;
+}
+button:hover{
+ background: linear-gradient(to right,#ffc082 ,#ffc082);
+ background-color: #ffc082;
+}
+button:active{
+ transform: scale(0.95);
+}
+
 #retornaMenu{
   display: none;
   border: 1px white solid;
@@ -79,6 +104,12 @@ body {
 
 .tocando {
   background-color: blue;
+}
+.erro {
+  background-color: #ff3333;
+}
+.acerto {
+  background-color: #008000;
 }
 
 #invisible {
