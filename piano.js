@@ -17,7 +17,9 @@ let nonap1 = [17, 17, 18, 19, 19, 18, 17, 16, 15, 15, 16, 17, 17, 25, 16, 16, 17
 let jinglebell = [17, 17, 17, 25, 17, 17, 17, 25, 17, 19, 15, 16, 17, 25, 25, 25, 18, 18, 18, 25, 17, 17, 17, 25, 16, 17, 16, 17, 16, 25, 19, 17, 17, 17, 25, 17, 17, 17, 25, 17, 19, 15, 16, 17, 25, 18, 18, 18, 25, 18, 17, 17, 25, 19, 19, 18, 16, 15];
 let asabranca = [15, 16, 17, 25, 19, 25, 19, 25, 17, 25, 18, 25, 25, 25, 18, 15, 16, 17, 19, 25, 19, 25, 18, 17, 17, 25, 15, 15, 16, 17, 19, 25, 19, 18, 17, 15, 18, 25, 25, 25, 17, 17, 16, 16, 25, 17, 25, 16, 16, 15, 15];
 let canetaazul = [16, 19, 19, "06", 25, 25, 16, 17, 17, 16, 25, 25, 16, 19, 19, "06", 25, 15, 16, 17, 16, 16, 25, "03"];
-let placar = parseInt(localStorage.getItem('placar'));
+let placarContainer = document.querySelector('#placar-header');
+let placarEl = document.querySelector('#placar-piano');
+placar = 0;
 let dificuldade = document.querySelector('#dificuldade');
 
 // variavel para parar a musica caso perca
@@ -82,6 +84,7 @@ botaoJogar.addEventListener('click', () => {
     pia.classList.remove("none");
 
     voltar.style.display = 'block';
+    placarContainer.style.display = 'flex';
 
     for (let i = 0; i < musica.length; i++)
         if (musica[i] != 25)
@@ -96,6 +99,7 @@ voltar.addEventListener('click', () => {
     menu.classList.remove("none");
     pia.classList.add("none");
     voltar.style.display = 'none';
+    placarContainer.style.display = 'none';
     window.location.reload(true);  
 })
 
@@ -108,6 +112,7 @@ function erro(id) {
 function fim() {
     alert("Boaaa! Você venceu e é SENSACIONAL! 😄");
     placar += 100;
+    placarEl.innerHTML = placar;
     localStorage.setItem('placar', placar);
     window.location.reload(true);
 }
@@ -134,6 +139,8 @@ function tocar(id, clique) {
             setTimeout(erro, 500);
         }
         else {
+            placar+=10;
+            placarEl.innerHTML = placar;
             tocada.classList.add("acerto");
             setTimeout(() => {
                 tocada.classList.remove("acerto");

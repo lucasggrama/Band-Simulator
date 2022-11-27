@@ -53,13 +53,11 @@ let opçõesPerfil = [
         imagem: './imgs/pngegg.png'
     }
 ]
-let perfisDeUsuario = [
-    {
-        nome: 'Anônimo',
-        imagem: './imgs/pngegg.png',
-        pontuacao: 0
-    }
-];
+let perfisDeUsuario = [{
+    nome: 'Anônimo',
+    imagem: './imgs/pngegg.png',
+    pontuacao: 0
+}];
 let perfilSelecao = [];
 let perfilInicial = document.querySelector('#inicial');
 perfilSelecao.push(perfilInicial);
@@ -232,7 +230,6 @@ function criaPerfil() {
     };
     perfisDeUsuario.push(novo_perfil);
     perfilSelecao.push(novoPerfil);
-
 }
 function switchImage() {
     imagemPreviewEl.src = opçõesPerfil[j].imagem;
