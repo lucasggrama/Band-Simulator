@@ -122,6 +122,12 @@ function aparecerDiv(e) {
         else
             perfilNovoEl.style.display = "none";
     }
+    else if(e.currentTarget.innerHTML == 'Como jogar' || e.currentTarget == fecharComo){
+        if(comoJogar.style.display == 'none')
+            comoJogar.style.display = 'block';
+        else
+            comoJogar.style.display = 'none';
+    }
     else if (e.currentTarget.innerHTML != "Jogar") {
         if (perfilEL.style.display == "none")
             perfilEL.style.display = "grid";
@@ -132,6 +138,7 @@ function aparecerDiv(e) {
 
 let fecharPlacar = document.querySelector('#botaoPlacarX');
 let fecharSobre = document.querySelector('#botaoSobreX');
+let fecharComo = document.querySelector('#botaoComoX');
 
 let corrigirBotao = document.querySelector('#novoPerfil');
 let botaoDiv = document.querySelectorAll('.botoesDiv');
@@ -139,6 +146,7 @@ let sobreEl = document.querySelector('#sobre');
 let placarEl = document.querySelector('#placar');
 let perfilEL = document.querySelector('#container-perfil');
 let perfilNovoEl = document.querySelector('#newPerfil');
+let comoJogar = document.querySelector('#como');
 
 for (botoes of botaoDiv) {
     botoes.addEventListener('click', aparecerDiv);

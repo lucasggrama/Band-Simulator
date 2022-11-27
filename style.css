@@ -162,7 +162,9 @@ body {
   float: right;
   top: 1vh;
 }
-
+#como{
+  display:none;
+}
 #como li, #sobre p {
   font-family: 'Mulish', sans-serif;
   font-size: 2vh;
