@@ -177,9 +177,9 @@ imagemPadrao(imagens, 'imgs/pngegg.png');
 
 // ------------------------------------- selecionar Perfil ----------------------------------------------------
 function atualiza(e){
+    console.log(perfilAtual);
     imagemPadrao(imagens,perfisDeUsuario[e].imagem);
     seuNome.innerHTML = perfisDeUsuario[e].nome;
-    localStorage.setItem('placar', perfisDeUsuario[e].pontuacao);
     pontuacaoEl.innerHTML = 'Sua pontuação: ' + localStorage.getItem('placar');
 }
 let perfilAtual = 0;
@@ -282,6 +282,7 @@ function removePerfil(){
     else{
         imagemPadrao(imagens,perfisDeUsuario[0].imagem);
         seuNome.innerHTML = perfisDeUsuario[0].nome;
+        perfilSelecao[0].classList.add('perfilSelecionado');
     
         perfisDeUsuario.splice(perfilAtual, 1);
         perfilSelecao[perfilAtual].remove();
@@ -293,3 +294,52 @@ function removePerfil(){
     console.log(perfilAtual);
 }
 $('#remover').click(removePerfil);
+
+function salvar(){
+    localStorage.setItem('perfilSalvo', JSON.stringify(perfisDeUsuario));
+    console.log(perfilAtual);
+}
+$('#salvar').click(salvar);
+
+function carregar(){
+    let perfisSalvos = localStorage.getItem('perfilSalvo');
+    perfisSalvos = JSON.parse(perfisSalvos);
+
+    perfisDeUsuario = perfisSalvos;
+    for(x = 1;x<perfilSelecao.length;x++){
+        perfilSelecao[x].remove();
+    }
+    perfilSelecao = [];
+    perfilSelecao.push(perfilInicial);
+
+    for(let x = 1; x<perfisDeUsuario.length; x++){
+        // Container do antigo Perfil
+
+        let containerPerfis = document.querySelector('#container-perfils-salvos')
+        let novoPerfil = document.createElement('div');
+        containerPerfis.appendChild(novoPerfil);
+        novoPerfil.classList.add('perfilAdd');
+        novoPerfil.addEventListener('click', selecionarPerfil);
+
+        // imagem do antigo Perfil
+        let novaImagem = document.createElement('img');
+        novaImagem.src = perfisDeUsuario[x].imagem;
+        novoPerfil.appendChild(novaImagem);
+        novaImagem.classList.add('imagemPerfisSalva');
+
+        // nome do antigo Perfil
+        let novoNome = document.createElement('p');
+        novoNome.innerHTML = perfisDeUsuario[x].nome;
+        novoPerfil.appendChild(novoNome);
+        novoNome.classList.add('textoPerfilAdd');
+
+        perfilSelecao.push(novoPerfil);
+
+        imagemPadrao(imagens,perfisDeUsuario[0].imagem);
+        seuNome.innerHTML = perfisDeUsuario[0].nome;
+        perfilSelecao[0].classList.add('perfilSelecionado');
+        perfilAtual = 0;
+        console.log(perfilAtual);
+    }
+}
+$('#carregar').click(carregar);
