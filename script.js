@@ -161,12 +161,7 @@ botaoNewPerfil.addEventListener('click', aparecerDiv);
 // fim botoes
 // ------------------------------------- Imagens ---------------------------------------------------------
 
-function alteraImagemPerfil() {
-    imagemPerfil.src = bandas[i].imagem;
-}
 
-let imagemPerfil = document.querySelector('#imagemPerfil');
-imagemPerfil.addEventListener('click', alteraImagemPerfil);
 
 function imagemPadrao(imagemVetor, string) {
     for (imagem of imagemVetor) {
