@@ -32,6 +32,8 @@ let tituloMusica = document.querySelector('#botao1')
     idmus %= 5;
     idchange(idmus);
 })*/
+if(localStorage.getItem('placar') == 0){}
+
 idchange(idmus)
 soma.addEventListener('click', () => {
     idmus = (idmus + 1) % 5;
@@ -110,7 +112,7 @@ let containerFimEl = document.querySelector("#fim-de-jogo");
 function erro(id) {
     window.location.reload(true);  
     alert("Ahh! Você Perdeu! 😫");
-    if(placar > localStorage.getItem('recorde') || localStorage.getItem('recorede') == null)
+    if(placar > localStorage.getItem('recorde') || localStorage.getItem('recorde') == null)
     {
         alert("Novo recorde!");
         localStorage.setItem('recorde', placar);
