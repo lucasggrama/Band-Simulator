@@ -360,12 +360,16 @@ function carregar(){
 let recarrega = localStorage.getItem('perfilSalvo');
 recarrega = JSON.parse(recarrega);
 
-if(recarrega == ''){
+if(recarrega == null){
     localStorage.setItem('perfilAtual', perfilAtual);
 }
-
 else{
     for(al of perfilSelecao)
         al.classList.remove('perfilSelecionado');
     carregar();
+}
+function reset(){
+    localStorage.setItem('perfilAtual', 0);
+    localStorage.setItem('recorde', 0);
+    localStorage.setItem('perfilSalvo', null);
 }
