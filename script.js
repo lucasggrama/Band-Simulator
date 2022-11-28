@@ -198,6 +198,7 @@ function selecionarPerfil(e){
         }
     }
     localStorage.setItem('perfilAtual', perfilAtual);
+    localStorage.setItem('recorde', perfisDeUsuario[perfilAtual].pontuacao);
 }
 // ------------------------------------- criar Perfil ---------------------------------------------------------
 function criaPerfil() {
@@ -341,13 +342,23 @@ function carregar(){
         novoPerfil.appendChild(novoNome);
         novoNome.classList.add('textoPerfilAdd');
 
+        pontuacaoEl.innerHTML = 'Sua pontuação: ' + perfisDeUsuario[x].pontuacao;
+
         perfilSelecao.push(novoPerfil);
     }
     imagemPadrao(imagens,perfisDeUsuario[perfilAtualAntigo].imagem);
     seuNome.innerHTML = perfisDeUsuario[perfilAtualAntigo].nome;
     perfilSelecao[perfilAtualAntigo].classList.add('perfilSelecionado');
     perfilAtual = perfilAtualAntigo;
+
+    placarRecente = localStorage.getItem('recorde');
+    perfisDeUsuario[perfilAtual].pontuacao = placarRecente;
+    pontuacaoEl.innerHTML = 'Sua pontuação: ' + perfisDeUsuario[perfilAtual].pontuacao;
+
+    console.log(placarRecente);
     console.log(perfilAtual);
+
+    salvar();
 }
 
 let recarrega = localStorage.getItem('perfilSalvo');
