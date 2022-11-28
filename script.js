@@ -266,7 +266,7 @@ bodyEl.addEventListener('keydown', (e) => {
                                 musicaLink.href = "https://www.youtube.com/watch?v=GyRmVkAGrKo&ab_channel=LeandroMota";
                                 opçõesPerfil.push({'imagem': './imgs/manoel-gomes-logo.png'});
                                 iconEl.href = "./imgs/manoel-gomes-logo.png";
-                                audio.src = "./audio/manoel-gomes.mp3";
+                                audio.src = "./audio/manoelgomes.mp3";
                                 audio.play();
                             }
                         })

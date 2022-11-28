@@ -11,6 +11,7 @@ let idmus = 0;
 let subtrai = document.querySelector('#subtrai');
 let soma = document.querySelector('#soma');
 let link = document.querySelector('a');
+let recorde = document.querySelector('#recorde')
 
 let doremifa = [18, 19, 20, 21, 25, 21, 21, 25, 18, 19, 18, 19, 25, 19, 19, 25, 18, 22, 21, 20, 25, 20, 20, 18, 19, 20, 21, 25, 21, 21];
 let nonap1 = [17, 17, 18, 19, 19, 18, 17, 16, 15, 15, 16, 17, 17, 25, 16, 16, 17, 17, 18, 19, 19, 18, 17, 16, 15, 15, 16, 17, 16, 25, 15, 15];
@@ -44,7 +45,11 @@ subtrai.addEventListener('click', () => {
     idchange(idmus);
 }
 );
-
+// definir recorde
+if(localStorage.getItem('recorde') == null)
+    recorde.innerHTML = 'Recorde: 0'
+else
+    recorde.innerHTML = 'Recorde: ' + localStorage.getItem('recorde');
 function idchange(idm) {
     if (idm == 0) {
         musica = doremifa;
@@ -77,9 +82,6 @@ function idchange(idm) {
 }
 
 botaoJogar.addEventListener('click', () => {
-    if(idmus == -1)
-        alert("Escolha uma musica primeiro !!!")
-    else {
     menu.classList.add("none");
     pia.classList.remove("none");
 
@@ -91,7 +93,7 @@ botaoJogar.addEventListener('click', () => {
             music.push(musica[i]);
 
     play(musica.length - 1);
-    }
+    
 })
 
 voltar.addEventListener('click', () => {
@@ -108,10 +110,20 @@ let containerFimEl = document.querySelector("#fim-de-jogo");
 function erro(id) {
     window.location.reload(true);  
     alert("Ahh! Você Perdeu! 😫");
+    if(placar > localStorage.getItem('recorde') || localStorage.getItem('recorede') == null)
+    {
+        alert("Novo recorde!");
+        localStorage.setItem('recorde', placar);
+    }
 }
 function fim() {
     alert("Boaaa! Você venceu e é SENSACIONAL! 😄");
     placar += 100;
+    if(placar > localStorage.getItem('recorde') || localStorage.getItem('recorede') == null)
+    {
+        alert("Novo recorde!")
+        localStorage.setItem('recorde', placar)
+    }
     placarEl.innerHTML = placar;
     localStorage.setItem('placar', placar);
     window.location.reload(true);
@@ -139,7 +151,12 @@ function tocar(id, clique) {
             setTimeout(erro, 500);
         }
         else {
-            placar+=10;
+            if(dificuldade.innerHTML == "Dificuldade: Fácil")
+                placar += 10;
+            else if(dificuldade.innerHTML == "Dificuldade: Médio")
+                placar += 15;
+            else
+                placar += 20;
             placarEl.innerHTML = placar;
             tocada.classList.add("acerto");
             setTimeout(() => {
