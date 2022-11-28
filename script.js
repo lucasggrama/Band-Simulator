@@ -297,6 +297,7 @@ function removePerfil(){
         perfilAtual = 0;
     }
     localStorage.setItem('perfilAtual', perfilAtual);
+    pontuacaoEl.innerHTML = 'Sua pontuação: ' + perfisDeUsuario[perfilAtual].pontuacao;
     console.log(perfilAtual);
     salvar()
 }
