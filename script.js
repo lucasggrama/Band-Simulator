@@ -63,8 +63,6 @@ let perfilInicial = document.querySelector('#inicial');
 perfilInicial.addEventListener('click', selecionarPerfil);
 perfilSelecao.push(perfilInicial);
 
-let recarrega = localStorage.getItem('perfilSalvo');
-recarrega = JSON.parse(recarrega);
 
 
 let volumeEl = document.querySelector("#reproducao-musica");
@@ -199,6 +197,7 @@ function selecionarPerfil(e){
             atualiza(perfilAtual);
         }
     }
+    localStorage.setItem('perfilAtual', perfilAtual);
 }
 // ------------------------------------- criar Perfil ---------------------------------------------------------
 function criaPerfil() {
@@ -234,6 +233,7 @@ function criaPerfil() {
     };
     perfisDeUsuario.push(novo_perfil);
     perfilSelecao.push(novoPerfil);
+    salvar()
 }
 function switchImage() {
     imagemPreviewEl.src = opçõesPerfil[j].imagem;
@@ -295,17 +295,21 @@ function removePerfil(){
 
         perfilAtual = 0;
     }
+    localStorage.setItem('perfilAtual', perfilAtual);
     console.log(perfilAtual);
+    salvar()
 }
 $('#remover').click(removePerfil);
 
 function salvar(){
     localStorage.setItem('perfilSalvo', JSON.stringify(perfisDeUsuario));
     console.log(perfilAtual);
+    localStorage.setItem('perfilAtual', perfilAtual);
 }
-$('#salvar').click(salvar);
 
 function carregar(){
+    let perfilAtualAntigo = localStorage.getItem('perfilAtual');
+
     let perfisSalvos = localStorage.getItem('perfilSalvo');
     perfisSalvos = JSON.parse(perfisSalvos);
 
@@ -338,17 +342,23 @@ function carregar(){
         novoNome.classList.add('textoPerfilAdd');
 
         perfilSelecao.push(novoPerfil);
-
-        imagemPadrao(imagens,perfisDeUsuario[0].imagem);
-        seuNome.innerHTML = perfisDeUsuario[0].nome;
-        perfilSelecao[0].classList.add('perfilSelecionado');
-        perfilAtual = 0;
-        console.log(perfilAtual);
     }
+    imagemPadrao(imagens,perfisDeUsuario[perfilAtualAntigo].imagem);
+    seuNome.innerHTML = perfisDeUsuario[perfilAtualAntigo].nome;
+    perfilSelecao[perfilAtualAntigo].classList.add('perfilSelecionado');
+    perfilAtual = perfilAtualAntigo;
+    console.log(perfilAtual);
 }
-$('#carregar').click(carregar);
-if(recarrega == ''){}
+
+let recarrega = localStorage.getItem('perfilSalvo');
+recarrega = JSON.parse(recarrega);
+
+if(recarrega == ''){
+    localStorage.setItem('perfilAtual', perfilAtual);
+}
 
 else{
+    for(al of perfilSelecao)
+        al.classList.remove('perfilSelecionado');
     carregar();
 }
