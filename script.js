@@ -63,6 +63,10 @@ let perfilInicial = document.querySelector('#inicial');
 perfilInicial.addEventListener('click', selecionarPerfil);
 perfilSelecao.push(perfilInicial);
 
+let recarrega = localStorage.getItem('perfilSalvo');
+recarrega = JSON.parse(recarrega);
+
+
 let volumeEl = document.querySelector("#reproducao-musica");
 volumeEl.volume = 0.2;
 
@@ -343,3 +347,8 @@ function carregar(){
     }
 }
 $('#carregar').click(carregar);
+if(recarrega == ''){}
+
+else{
+    carregar();
+}
