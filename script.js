@@ -60,8 +60,8 @@ let perfisDeUsuario = [{
 }];
 let perfilSelecao = [];
 let perfilInicial = document.querySelector('#inicial');
-perfilSelecao.push(perfilInicial);
 perfilInicial.addEventListener('click', selecionarPerfil);
+perfilSelecao.push(perfilInicial);
 
 let volumeEl = document.querySelector("#reproducao-musica");
 volumeEl.volume = 0.2;
@@ -280,15 +280,16 @@ function removePerfil(){
         alert('não é possivel remover o perfil anonimo')
     }
     else{
-        imagemPadrao(imagens,perfisDeUsuario[perfilAtual-1].imagem);
-        seuNome.innerHTML = perfisDeUsuario[perfilAtual-1].nome;
+        imagemPadrao(imagens,perfisDeUsuario[0].imagem);
+        seuNome.innerHTML = perfisDeUsuario[0].nome;
     
         perfisDeUsuario.splice(perfilAtual, 1);
         perfilSelecao[perfilAtual].remove();
-        perfilSelecao.splice(perfilSelecao[perfilAtual], 1);
-        
-        perfilAtual--;
-    }
+        perfilSelecao.splice(perfilAtual, 1);
+        perfilSelecao[0].classList.add('perfilSelecionado');
 
+        perfilAtual = 0;
+    }
+    console.log(perfilAtual);
 }
 $('#remover').click(removePerfil);
