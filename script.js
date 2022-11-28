@@ -182,7 +182,7 @@ function atualiza(e){
     console.log(perfilAtual);
     imagemPadrao(imagens,perfisDeUsuario[e].imagem);
     seuNome.innerHTML = perfisDeUsuario[e].nome;
-    pontuacaoEl.innerHTML = 'Sua pontuação: ' + localStorage.getItem('placar');
+    pontuacaoEl.innerHTML = 'Sua pontuação: ' + perfisDeUsuario[e].pontuacao;
 }
 let perfilAtual = 0;
 
