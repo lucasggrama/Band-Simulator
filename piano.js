@@ -119,8 +119,8 @@ function erro(id) {
     }
 }
 function fim() {
-    alert("Boaaa! Você venceu e é SENSACIONAL! 😄");
     placar += 100;
+    alert("Boaaa! Você venceu e é SENSACIONAL! 😄");
     if(placar > localStorage.getItem('recorde') || localStorage.getItem('recorede') == null)
     {
         alert("Novo recorde!")
